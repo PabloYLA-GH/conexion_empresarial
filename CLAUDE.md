@@ -22,6 +22,8 @@ PHP no está instalado en el equipo, así que las herramientas de `vendor/bin` s
 
 Todo cambio debe pasar Pint y Larastan nivel 7 antes de abrir un Pull Request.
 
+Antes de cualquier push, ejecuta `./vendor/bin/sail composer ci:check`; es exactamente lo que corre la CI.
+
 ## Idioma
 
 - Código en inglés: clases, métodos, variables, tablas, columnas, rutas y commits.

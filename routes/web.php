@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'home')->name('home');
 Route::inertia('directorio', 'directorio')->name('directory');
+Route::inertia('vinculaciones', 'vinculaciones')->name('vinculaciones');
+Route::inertia('proximamente', 'proximamente')->name('proximamente');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'dashboard')->name('dashboard');

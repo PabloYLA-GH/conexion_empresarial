@@ -13,8 +13,7 @@
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 
-    --font-heading:
-        'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     --font-arial: Arial, Helvetica, sans-serif;
     --font-menlo: Menlo, ui-monospace, 'Courier New', monospace;
 

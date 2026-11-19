@@ -57,20 +57,23 @@ export function ProfileCard({
             </div>
             <div className="flex w-full flex-1 flex-col items-start gap-[23px] rounded-b-[12px] border-x border-b border-solid border-[#e2e8f0] bg-white p-[20px]">
                 <div className="flex w-full flex-col items-start gap-[11px]">
-                    <h3 className="text-trim w-full font-heading text-[16px] leading-[20px] font-bold text-[#0f172b]">
+                    <h3 className="w-full font-heading text-[16px] leading-[20px] font-bold text-[#0f172b] text-trim">
                         {profile.name}
                     </h3>
-                    <p className="text-trim w-[346px] font-arial text-[12px] leading-[19.5px] text-[#45556c]">
+                    <p className="w-[346px] font-arial text-[12px] leading-[19.5px] text-[#45556c] text-trim">
                         {profile.tagline}
                     </p>
                 </div>
                 <div className="flex w-full flex-col items-start gap-[23px]">
-                    <p className="text-trim w-full font-arial text-[14px] leading-[19.5px] text-[#45556c]">
+                    <p className="w-full font-arial text-[14px] leading-[19.5px] text-[#45556c] text-trim">
                         {profile.description}
                     </p>
                     <div className="flex items-center gap-[6px]">
-                        <FillIcon src="icon-location.svg" className="size-[14px]" />
-                        <span className="text-trim font-arial text-[12px] leading-[16px] whitespace-nowrap text-[#62748e]">
+                        <FillIcon
+                            src="icon-location.svg"
+                            className="size-[14px]"
+                        />
+                        <span className="font-arial text-[12px] leading-[16px] whitespace-nowrap text-[#62748e] text-trim">
                             {profile.location}
                         </span>
                     </div>
@@ -82,7 +85,7 @@ export function ProfileCard({
                         onClick={() => setOpen(true)}
                         className="flex shrink-0 cursor-pointer items-center gap-[8px]"
                     >
-                        <span className="text-trim font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-[#133260]">
+                        <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-[#133260] text-trim">
                             Consultar perfil
                         </span>
                         <Glyph
@@ -93,7 +96,11 @@ export function ProfileCard({
                     </button>
                 </div>
             </div>
-            <ProfileModal profile={profile} open={open} onOpenChange={setOpen} />
+            <ProfileModal
+                profile={profile}
+                open={open}
+                onOpenChange={setOpen}
+            />
         </article>
     );
 }

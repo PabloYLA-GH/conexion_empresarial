@@ -30,9 +30,18 @@ export function Glyph({ src, className, inset = '-7.14%' }: Props) {
 }
 
 /** Línea divisoria de 0px de alto exportada de Figma. */
-export function HairLine({ src, className = '' }: { src: string; className?: string }) {
+export function HairLine({
+    src,
+    className = '',
+}: {
+    src: string;
+    className?: string;
+}) {
     return (
-        <span className={`relative block h-0 w-full shrink-0 ${className}`} aria-hidden>
+        <span
+            className={`relative block h-0 w-full shrink-0 ${className}`}
+            aria-hidden
+        >
             <span className="absolute block" style={{ inset: '-0.5px 0' }}>
                 <img
                     alt=""
@@ -45,7 +54,13 @@ export function HairLine({ src, className = '' }: { src: string; className?: str
 }
 
 /** Ícono que llena su contenedor (inset-0). */
-export function FillIcon({ src, className }: { src: string; className: string }) {
+export function FillIcon({
+    src,
+    className,
+}: {
+    src: string;
+    className: string;
+}) {
     return (
         <span className={`relative block shrink-0 ${className}`} aria-hidden>
             <img

@@ -158,7 +158,7 @@ export function DirectoryFilters() {
                                 src="icon-filters.svg"
                                 className="size-[16px]"
                             />
-                            <h2 className="text-trim font-heading text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b]">
+                            <h2 className="font-heading text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b] text-trim">
                                 Filtros y búsqueda
                             </h2>
                         </div>
@@ -171,7 +171,7 @@ export function DirectoryFilters() {
                                 className="size-[9px]"
                                 inset="-5.56%"
                             />
-                            <span className="text-trim font-arial text-[12px] leading-[16px] whitespace-nowrap text-[#62748e]">
+                            <span className="font-arial text-[12px] leading-[16px] whitespace-nowrap text-[#62748e] text-trim">
                                 Limpiar
                             </span>
                         </button>

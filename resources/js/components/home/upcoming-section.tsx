@@ -34,15 +34,15 @@ export function UpcomingSection() {
                             className="h-[12.081px] w-[13.333px]"
                             inset="-5.52% -5%"
                         />
-                        <span className="text-trim font-arial text-[12px] leading-[16px] font-bold tracking-[0.6px] whitespace-nowrap text-[#133260] uppercase">
+                        <span className="font-arial text-[12px] leading-[16px] font-bold tracking-[0.6px] whitespace-nowrap text-[#133260] uppercase text-trim">
                             Vinculaciones
                         </span>
                     </div>
                     <div className="flex w-full flex-col items-start gap-[31px]">
-                        <h2 className="text-trim w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618]">
+                        <h2 className="w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618] text-trim">
                             Un ecosistema que sigue creciendo
                         </h2>
-                        <p className="text-trim w-full font-arial text-[16px] leading-[26px] text-[#45556c]">
+                        <p className="w-full font-arial text-[16px] leading-[26px] text-[#45556c] text-trim">
                             Esta primera versión prioriza conexiones directas.
                             Las siguientes herramientas se irán habilitando por
                             <br />
@@ -67,15 +67,15 @@ export function UpcomingSection() {
                     >
                         <div className="flex w-full flex-col items-start gap-[17px]">
                             <span className="flex items-center justify-center rounded-[4px] border border-solid border-[#e2e8f0] bg-[#f8fafc] px-[10px] py-[6px]">
-                                <span className="text-trim font-arial text-[12px] leading-[16.5px] font-bold tracking-[0.55px] whitespace-nowrap text-[#133260] uppercase">
+                                <span className="font-arial text-[12px] leading-[16.5px] font-bold tracking-[0.55px] whitespace-nowrap text-[#133260] uppercase text-trim">
                                     Próximamente
                                 </span>
                             </span>
                             <div className="flex w-full flex-col items-start gap-[19px]">
-                                <h3 className="text-trim w-full font-heading text-[16px] leading-[24px] font-bold text-[#0f172b]">
+                                <h3 className="w-full font-heading text-[16px] leading-[24px] font-bold text-[#0f172b] text-trim">
                                     {item.title}
                                 </h3>
-                                <p className="text-trim w-full font-arial text-[12px] leading-[19.5px] text-[#45556c]">
+                                <p className="w-full font-arial text-[12px] leading-[19.5px] text-[#45556c] text-trim">
                                     {item.text}
                                 </p>
                             </div>

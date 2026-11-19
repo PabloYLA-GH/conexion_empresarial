@@ -26,7 +26,7 @@ export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {
             <div className="relative mx-auto h-full w-full max-w-[1216px]">
                 <Link
                     href="/"
-                    className="text-trim absolute top-[71.5px] left-0 -translate-y-1/2 font-heading text-[18px] leading-[28px] font-extrabold tracking-[-0.45px] whitespace-nowrap text-[#133260]"
+                    className="absolute top-[71.5px] left-0 -translate-y-1/2 font-heading text-[18px] leading-[28px] font-extrabold tracking-[-0.45px] whitespace-nowrap text-[#133260] text-trim"
                 >
                     Comunidad 360°
                 </Link>
@@ -36,7 +36,7 @@ export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {
                         <Link
                             key={item.key}
                             href={item.href}
-                            className={`text-trim font-arial text-[14px] leading-[20px] whitespace-nowrap ${
+                            className={`font-arial text-[14px] leading-[20px] whitespace-nowrap text-trim ${
                                 item.key === current
                                     ? 'font-bold text-[#133260]'
                                     : 'text-[#45556c]'
@@ -49,7 +49,7 @@ export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {
 
                 <Link
                     href={login()}
-                    className="text-trim absolute top-[66px] left-[1010px] font-arial text-[14px] leading-[20px] whitespace-nowrap text-[#45556c]"
+                    className="absolute top-[66px] left-[1010px] font-arial text-[14px] leading-[20px] whitespace-nowrap text-[#45556c] text-trim"
                 >
                     Iniciar sesión
                 </Link>
@@ -57,7 +57,7 @@ export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {
                     href={register()}
                     className="absolute top-[55px] left-[1115px] flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px]"
                 >
-                    <span className="text-trim font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white">
+                    <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
                         Registrarme
                     </span>
                 </Link>

@@ -16,7 +16,7 @@ function Divider() {
 function Section({ title, children }: { title: string; children: ReactNode }) {
     return (
         <section className="flex w-full flex-col items-start gap-[28px]">
-            <h3 className="text-trim font-arial text-[14px] leading-[16px] font-bold text-[#45556c] uppercase">
+            <h3 className="font-arial text-[14px] leading-[16px] font-bold text-[#45556c] uppercase text-trim">
                 {title}
             </h3>
             {children}
@@ -56,7 +56,7 @@ export function ProfileModal({
                                 <span className="flex h-[20px] items-center justify-center rounded-[4px] border border-solid border-[#cad5e2] bg-[#f8fafc] px-[8px] font-arial text-[8px] font-bold tracking-[0.4px] text-[#133260] uppercase">
                                     Empresa
                                 </span>
-                                <Dialog.Title className="text-trim font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618]">
+                                <Dialog.Title className="font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618] text-trim">
                                     {profile.name}
                                 </Dialog.Title>
                                 <p className="flex items-center gap-[6px]">
@@ -66,7 +66,7 @@ export function ProfileModal({
                                         strokeWidth={1.5}
                                         className="text-[#90a1b9]"
                                     />
-                                    <span className="text-trim font-arial text-[12px] leading-[16px] text-[#62748e]">
+                                    <span className="font-arial text-[12px] leading-[16px] text-[#62748e] text-trim">
                                         {profile.location}
                                     </span>
                                 </p>
@@ -81,7 +81,11 @@ export function ProfileModal({
                                         <Heart
                                             size={14}
                                             strokeWidth={1.5}
-                                            fill={favorite ? 'currentColor' : 'none'}
+                                            fill={
+                                                favorite
+                                                    ? 'currentColor'
+                                                    : 'none'
+                                            }
                                         />
                                     </button>
                                     <button
@@ -94,7 +98,7 @@ export function ProfileModal({
                                             strokeWidth={1.75}
                                             className="text-white"
                                         />
-                                        <span className="text-trim font-arial text-[12px] leading-[16px] font-bold whitespace-nowrap text-white">
+                                        <span className="font-arial text-[12px] leading-[16px] font-bold whitespace-nowrap text-white text-trim">
                                             Solicitar contacto
                                         </span>
                                     </button>
@@ -105,7 +109,7 @@ export function ProfileModal({
                         <Divider />
 
                         <Section title="Descripción y trayectoria">
-                            <p className="text-trim w-full font-arial text-[14px] leading-[20px] text-[#45556c]">
+                            <p className="w-full font-arial text-[14px] leading-[20px] text-[#45556c] text-trim">
                                 {profile.description}.
                             </p>
                         </Section>
@@ -119,7 +123,7 @@ export function ProfileModal({
                                         key={product}
                                         className="flex h-[56px] items-center rounded-[16px] border border-solid border-[#e2e8f0] bg-[#f8fafc] px-[20px] font-arial text-[14px] text-[#314158]"
                                     >
-                                        <span className="text-trim leading-[20px]">
+                                        <span className="leading-[20px] text-trim">
                                             {product}
                                         </span>
                                     </li>
@@ -134,7 +138,7 @@ export function ProfileModal({
                                 <h4 className="font-arial text-[14px] leading-[16px] font-bold text-[#0f172b]">
                                     {profile.collaboration.title}
                                 </h4>
-                                <p className="text-trim w-full font-arial text-[14px] leading-[20px] text-[#45556c]">
+                                <p className="w-full font-arial text-[14px] leading-[20px] text-[#45556c] text-trim">
                                     {profile.collaboration.text}
                                 </p>
                             </div>

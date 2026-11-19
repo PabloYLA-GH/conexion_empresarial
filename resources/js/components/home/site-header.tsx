@@ -8,7 +8,7 @@ const nav: { key: NavKey; label: string; href: string }[] = [
     { key: 'inicio', label: 'Inicio', href: '/' },
     { key: 'directorio', label: 'Directorio', href: '/directorio' },
     { key: 'vinculaciones', label: 'Vinculaciones', href: '/vinculaciones' },
-    { key: 'proximamente', label: 'Próximamente', href: '/#proximamente' },
+    { key: 'proximamente', label: 'Próximamente', href: '/proximamente' },
 ];
 
 // Posición (desde el borde izquierdo del contenedor) y ancho de la línea
@@ -17,6 +17,7 @@ const underline: Partial<Record<NavKey, { left: number; width: number }>> = {
     inicio: { left: 394, width: 36.56 },
     directorio: { left: 460, width: 66 },
     vinculaciones: { left: 547, width: 94 },
+    proximamente: { left: 664, width: 94 },
 };
 
 export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {

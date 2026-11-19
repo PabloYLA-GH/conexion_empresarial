@@ -16,6 +16,7 @@ void createInertiaApp({
             case name === 'home':
             case name === 'directorio':
             case name === 'vinculaciones':
+            case name === 'proximamente':
                 return null;
             case name.startsWith('auth/'):
                 return AuthLayout;

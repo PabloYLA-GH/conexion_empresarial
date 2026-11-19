@@ -10,7 +10,7 @@ const IMG = '/images/home';
 const DIR = '/images/directory';
 
 // Orden de lectura de la cuadrícula 3 × 5 tal como aparece en el diseño.
-// `null` = tarjeta sin imagen (fondo de relleno del diseño).
+// `null` = tarjeta sin imagen (fondo de relleno del diseño, como en Figma).
 const images: (string | null)[] = [
     `${IMG}/card-9.png`,
     `${IMG}/card-7.png`,
@@ -21,7 +21,7 @@ const images: (string | null)[] = [
     `${IMG}/card-15.png`,
     null,
     null,
-    null, // Bruma: imagen pendiente (no se pudo leer del diseño)
+    `${DIR}/card-bruma.png`,
     `${IMG}/card-14.png`,
     `${DIR}/card-umbral.png`,
     `${DIR}/card-savia.png`,

@@ -7,7 +7,7 @@ type NavKey = 'inicio' | 'directorio' | 'vinculaciones' | 'proximamente';
 const nav: { key: NavKey; label: string; href: string }[] = [
     { key: 'inicio', label: 'Inicio', href: '/' },
     { key: 'directorio', label: 'Directorio', href: '/directorio' },
-    { key: 'vinculaciones', label: 'Vinculaciones', href: '/#vinculaciones' },
+    { key: 'vinculaciones', label: 'Vinculaciones', href: '/vinculaciones' },
     { key: 'proximamente', label: 'Próximamente', href: '/#proximamente' },
 ];
 
@@ -16,6 +16,7 @@ const nav: { key: NavKey; label: string; href: string }[] = [
 const underline: Partial<Record<NavKey, { left: number; width: number }>> = {
     inicio: { left: 394, width: 36.56 },
     directorio: { left: 460, width: 66 },
+    vinculaciones: { left: 547, width: 94 },
 };
 
 export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {

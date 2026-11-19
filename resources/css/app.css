@@ -13,6 +13,11 @@
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 
+    --font-heading:
+        'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-arial: Arial, Helvetica, sans-serif;
+    --font-menlo: Menlo, ui-monospace, 'Courier New', monospace;
+
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
@@ -140,4 +145,11 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+/* Recorta el espacio superior/inferior del texto hasta la altura de las
+   mayúsculas, igual que el diseño de Figma (text-box-trim). */
+@utility text-trim {
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }

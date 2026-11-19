@@ -1,11 +1,15 @@
-import { TextLink } from './buttons';
-import { FillIcon, HairLine } from './glyph';
+import { useState } from 'react';
+import { FillIcon, Glyph, HairLine } from './glyph';
+import { ProfileModal } from './profile-modal';
 
 export type Profile = {
     name: string;
     tagline: string;
     description: string;
     location: string;
+    products: string[];
+    collaboration: { title: string; text: string };
+    contact: { phone: string; email: string };
     /** Ruta completa de la imagen. Si es null se muestra el fondo de relleno del diseño. */
     image: string | null;
 };
@@ -16,6 +20,15 @@ export const profileBase = {
     description:
         'Empresa mexicana fundada en 2010 con sede en Guadalajara, Jalisco, dedicada al desarrollo y fabricación de insumos orgánicos y convencionales para el agro, el campo extensivo, invernaderos, huertas y jardines',
     location: 'Guadalajara, Jalisco',
+    products: ['Nutrición Y Bioestimulación', 'Protección Biológica Y Sanidad'],
+    collaboration: {
+        title: 'Red De Distribución Y Socios Comerciales',
+        text: 'Ampliación de cobertura: Bamagro busca activamente tiendas de agroquímicos, viveros, ferreterías agrícolas y empresas distribuidoras para comercializar su catálogo en todo México.',
+    },
+    contact: {
+        phone: 'Disponible al registrar perfil real',
+        email: 'contact@bamagro.com',
+    },
 };
 
 export function ProfileCard({
@@ -25,6 +38,8 @@ export function ProfileCard({
     profile: Profile;
     className?: string;
 }) {
+    const [open, setOpen] = useState(false);
+
     return (
         <article className={`flex w-full flex-col items-start ${className}`}>
             <div
@@ -62,17 +77,23 @@ export function ProfileCard({
                 </div>
                 <div className="flex w-full flex-col items-start gap-[15px]">
                     <HairLine src="divider-card.svg" />
-                    <TextLink
-                        href="#directorio"
-                        arrow="arrow-consultar.svg"
-                        arrowClassName="size-[7.778px]"
-                        arrowInset="0 0 -6.73% -6.73%"
-                        className="gap-[8px]"
+                    <button
+                        type="button"
+                        onClick={() => setOpen(true)}
+                        className="flex shrink-0 cursor-pointer items-center gap-[8px]"
                     >
-                        Consultar perfil
-                    </TextLink>
+                        <span className="text-trim font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-[#133260]">
+                            Consultar perfil
+                        </span>
+                        <Glyph
+                            src="arrow-consultar.svg"
+                            className="size-[7.778px]"
+                            inset="0 0 -6.73% -6.73%"
+                        />
+                    </button>
                 </div>
             </div>
+            <ProfileModal profile={profile} open={open} onOpenChange={setOpen} />
         </article>
     );
 }

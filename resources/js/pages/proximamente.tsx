@@ -8,8 +8,6 @@ import {
     Package,
     Sprout,
 } from 'lucide-react';
-import { SiteFooter } from '@/components/home/site-footer';
-import { SiteHeader } from '@/components/home/site-header';
 import { ProximamenteCard } from '@/components/proximamente/proximamente-card';
 import type { Proximamente } from '@/components/proximamente/proximamente-card';
 import { ProximamenteCta } from '@/components/proximamente/proximamente-cta';
@@ -64,9 +62,7 @@ export default function Proximamente() {
     return (
         <>
             <Head title="Próximamente" />
-            <div className="min-h-screen bg-white font-arial text-[#0f172b]">
-                <SiteHeader current="proximamente" />
-                <main>
+            <main>
                     <ProximamenteHero />
                     <div className="mt-[103px] bg-[#f8fafc] pt-[47px] pb-[279px]">
                         <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[77px]">
@@ -81,9 +77,7 @@ export default function Proximamente() {
                             <ProximamenteCta />
                         </div>
                     </div>
-                </main>
-                <SiteFooter />
-            </div>
+            </main>
         </>
     );
 }

@@ -1,27 +1,18 @@
-import { Link } from '@inertiajs/react';
-import { login, register } from '@/routes';
+import { Link, usePage } from '@inertiajs/react';
+import { dashboard, login, logout, register } from '@/routes';
+import { useCurrentUrl } from '@/hooks/use-current-url';
 import { HairLine } from './glyph';
 
-type NavKey = 'inicio' | 'directorio' | 'vinculaciones' | 'proximamente';
-
-const nav: { key: NavKey; label: string; href: string }[] = [
-    { key: 'inicio', label: 'Inicio', href: '/' },
-    { key: 'directorio', label: 'Directorio', href: '/directorio' },
-    { key: 'vinculaciones', label: 'Vinculaciones', href: '/vinculaciones' },
-    { key: 'proximamente', label: 'Próximamente', href: '/proximamente' },
+const nav = [
+    { label: 'Inicio', href: '/' },
+    { label: 'Directorio', href: '/directorio' },
+    { label: 'Vinculaciones', href: '/vinculaciones' },
+    { label: 'Próximamente', href: '/proximamente' },
 ];
 
-// Posición (desde el borde izquierdo del contenedor) y ancho de la línea
-// que marca la sección activa, según el diseño de Figma.
-const underline: Partial<Record<NavKey, { left: number; width: number }>> = {
-    inicio: { left: 394, width: 36.56 },
-    directorio: { left: 460, width: 66 },
-    vinculaciones: { left: 547, width: 94 },
-    proximamente: { left: 664, width: 94 },
-};
-
-export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {
-    const line = underline[current];
+export function SiteHeader() {
+    const { isCurrentUrl } = useCurrentUrl();
+    const { auth } = usePage().props;
 
     return (
         <header className="relative h-[96px] bg-white">
@@ -33,41 +24,50 @@ export function SiteHeader({ current = 'inicio' }: { current?: NavKey }) {
                     Comunidad 360°
                 </Link>
 
-                <nav className="absolute top-[66px] left-[394.05px] flex w-[358px] items-center justify-between">
-                    {nav.map((item) => (
-                        <Link
-                            key={item.key}
-                            href={item.href}
-                            className={`font-arial text-[14px] leading-[20px] whitespace-nowrap text-trim ${
-                                item.key === current
-                                    ? 'font-bold text-[#133260]'
-                                    : 'text-[#45556c]'
-                            }`}
-                        >
-                            {item.label}
-                        </Link>
-                    ))}
+                <nav aria-label="Navegación principal" className="absolute top-[66px] left-[394.05px] flex w-[358px] items-center justify-between">
+                    {nav.map((item) => {
+                        const active = isCurrentUrl(item.href);
+
+                        return (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                aria-current={active ? 'page' : undefined}
+                                className={`relative font-arial text-[14px] leading-[20px] whitespace-nowrap text-trim ${
+                                    active
+                                        ? 'font-bold text-[#133260] after:absolute after:top-[29px] after:right-0 after:left-0 after:h-[2px] after:bg-[#133260] after:content-[" "]'
+                                        : 'text-[#45556c]'
+                                }`}
+                            >
+                                {item.label}
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 <Link
-                    href={login()}
+                    href={auth.user ? dashboard() : login()}
                     className="absolute top-[66px] left-[1010px] font-arial text-[14px] leading-[20px] whitespace-nowrap text-[#45556c] text-trim"
                 >
-                    Iniciar sesión
+                    {auth.user ? 'Ir al panel' : 'Iniciar sesión'}
                 </Link>
-                <Link
-                    href={register()}
-                    className="absolute top-[55px] left-[1115px] flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px]"
-                >
-                    <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
-                        Registrarme
-                    </span>
-                </Link>
-                {line && (
-                    <span
-                        className="absolute -bottom-px z-10 h-[2px] bg-[#133260]"
-                        style={{ left: line.left, width: line.width }}
-                    />
+                {auth.user ? (
+                    <Link
+                        href={logout()}
+                        as="button"
+                        className="absolute top-[55px] left-[1115px] flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px] font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white"
+                    >
+                        Cerrar sesión
+                    </Link>
+                ) : (
+                    <Link
+                        href={register()}
+                        className="absolute top-[55px] left-[1115px] flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px]"
+                    >
+                        <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
+                            Registrarme
+                        </span>
+                    </Link>
                 )}
             </div>
 

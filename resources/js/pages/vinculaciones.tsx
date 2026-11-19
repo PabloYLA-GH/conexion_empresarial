@@ -1,6 +1,4 @@
 import { Head } from '@inertiajs/react';
-import { SiteFooter } from '@/components/home/site-footer';
-import { SiteHeader } from '@/components/home/site-header';
 import { VinculacionCard } from '@/components/vinculaciones/vinculacion-card';
 import type { Vinculacion } from '@/components/vinculaciones/vinculacion-card';
 import { VinculacionFilters } from '@/components/vinculaciones/vinculacion-filters';
@@ -24,9 +22,7 @@ export default function Vinculaciones() {
     return (
         <>
             <Head title="Vinculaciones" />
-            <div className="min-h-screen bg-white font-arial text-[#0f172b]">
-                <SiteHeader current="vinculaciones" />
-                <main>
+            <main>
                     <VinculacionHero />
                     <div className="mt-[101px] bg-[#f8fafc] pb-[285px]">
                         <div className="mx-auto flex w-full max-w-[1216px] flex-col gap-[18px]">
@@ -41,9 +37,7 @@ export default function Vinculaciones() {
                             </div>
                         </div>
                     </div>
-                </main>
-                <SiteFooter />
-            </div>
+            </main>
         </>
     );
 }

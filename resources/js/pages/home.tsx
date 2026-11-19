@@ -5,17 +5,13 @@ import { EcosystemSection } from '@/components/home/ecosystem-section';
 import { FeaturedProfilesSection } from '@/components/home/featured-profiles-section';
 import { HeroSection } from '@/components/home/hero-section';
 import { LinkingSection } from '@/components/home/linking-section';
-import { SiteFooter } from '@/components/home/site-footer';
-import { SiteHeader } from '@/components/home/site-header';
 import { UpcomingSection } from '@/components/home/upcoming-section';
 
 export default function Home() {
     return (
         <>
             <Head title="Inicio" />
-            <div className="min-h-screen bg-white font-arial text-[#0f172b]">
-                <SiteHeader />
-                <main>
+            <main>
                     <HeroSection />
                     <div className="mt-[87px] flex flex-col border-t border-solid border-[#e2e8f0] bg-[#f8fafc] px-4 pt-[64px] pb-[152px]">
                         <ConceptSection />
@@ -35,9 +31,7 @@ export default function Home() {
                             <CtaSection />
                         </div>
                     </div>
-                </main>
-                <SiteFooter />
-            </div>
+            </main>
         </>
     );
 }

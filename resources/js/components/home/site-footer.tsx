@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import { FillIcon } from './glyph';
 
 const heading =
@@ -32,20 +33,20 @@ export function SiteFooter() {
                     </p>
                 </div>
 
-                <nav className="flex w-[221px] shrink-0 flex-col items-start gap-[22px]">
+                <nav aria-label="Navegación del pie de página" className="flex w-[221px] shrink-0 flex-col items-start gap-[22px]">
                     <p className={heading}>Navegación</p>
-                    <a href="/" className={link}>
+                    <Link href="/" className={link}>
                         Inicio
-                    </a>
-                    <a href="/directorio" className={link}>
+                    </Link>
+                    <Link href="/directorio" className={link}>
                         Directorio empresarial y profesional
-                    </a>
-                    <a href="/#vinculaciones" className={link}>
+                    </Link>
+                    <Link href="/vinculaciones" className={link}>
                         Vinculaciones
-                    </a>
-                    <a href="/#proximamente" className={link}>
+                    </Link>
+                    <Link href="/proximamente" className={link}>
                         Próximamente
-                    </a>
+                    </Link>
                 </nav>
 
                 <div className="flex w-[238px] shrink-0 flex-col items-start gap-[17px]">
@@ -63,15 +64,15 @@ export function SiteFooter() {
 
                 <div className="flex w-[187px] shrink-0 flex-col items-start gap-[21px]">
                     <p className={heading}>Enlaces institucionales</p>
-                    <a href="/register" className={link}>
+                    <Link href="/register" className={link}>
                         Registrar perfil en el directorio
-                    </a>
-                    <a href="/login" className={link}>
+                    </Link>
+                    <Link href="/login" className={link}>
                         Acceso para integrantes
-                    </a>
-                    <a href="#privacidad" className={link}>
+                    </Link>
+                    <span className={link}>
                         Aviso de privacidad
-                    </a>
+                    </span>
                 </div>
             </div>
         </footer>

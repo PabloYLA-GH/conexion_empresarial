@@ -3,8 +3,6 @@ import { DirectoryFilters } from '@/components/directory/directory-filters';
 import { DirectoryHero } from '@/components/directory/directory-hero';
 import { ProfileCard, profileBase } from '@/components/home/profile-card';
 import type { Profile } from '@/components/home/profile-card';
-import { SiteFooter } from '@/components/home/site-footer';
-import { SiteHeader } from '@/components/home/site-header';
 
 const IMG = '/images/home';
 const DIR = '/images/directory';
@@ -35,9 +33,7 @@ export default function Directorio() {
     return (
         <>
             <Head title="Directorio" />
-            <div className="min-h-screen bg-white font-arial text-[#0f172b]">
-                <SiteHeader current="directorio" />
-                <main>
+            <main>
                     <DirectoryHero />
                     <div className="mt-[96px] border-t border-solid border-[#e2e8f0] bg-[#f8fafc] pt-[92px] pb-[156px]">
                         <div className="mx-auto flex w-full max-w-[1216px] items-start gap-[17px]">
@@ -71,9 +67,7 @@ export default function Directorio() {
                             </section>
                         </div>
                     </div>
-                </main>
-                <SiteFooter />
-            </div>
+            </main>
         </>
     );
 }

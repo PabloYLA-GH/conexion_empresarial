@@ -52,10 +52,10 @@ export function ConceptSection() {
                             {item.number}
                         </span>
                         <div className="flex min-w-px flex-1 flex-col items-start gap-[15px]">
-                            <h3 className="text-trim min-h-[12px] w-full font-heading text-[16px] leading-[24px] font-bold text-[#0f172b]">
+                            <h3 className="min-h-[12px] w-full font-heading text-[16px] leading-[24px] font-bold text-[#0f172b] text-trim">
                                 {item.title}
                             </h3>
-                            <p className="text-trim w-full font-arial text-[14px] leading-[22.75px] text-[#45556c]">
+                            <p className="w-full font-arial text-[14px] leading-[22.75px] text-[#45556c] text-trim">
                                 {item.text}
                             </p>
                         </div>

@@ -55,7 +55,9 @@ export default function Directorio() {
                                         perfiles{' '}
                                     </span>
                                     <span className="text-[#90a1b9]">·</span>
-                                    <span>436 registros aprobados en comunidad</span>
+                                    <span>
+                                        436 registros aprobados en comunidad
+                                    </span>
                                 </p>
                                 <div className="grid w-full grid-cols-3 gap-x-[18.5px] gap-y-[18px]">
                                     {profiles.map((profile, index) => (

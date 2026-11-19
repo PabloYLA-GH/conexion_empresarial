@@ -4,7 +4,9 @@ import { PrimaryButton } from './buttons';
 const items = [
     {
         title: 'Aliados',
-        text: ['Sinergias entre empresas y profesionistas para proyectos conjuntos.'],
+        text: [
+            'Sinergias entre empresas y profesionistas para proyectos conjuntos.',
+        ],
     },
     {
         title: 'Colaboradores',
@@ -12,11 +14,16 @@ const items = [
     },
     {
         title: 'Proveedores',
-        text: ['Abastecimiento local con productores y talleres de la comunidad.'],
+        text: [
+            'Abastecimiento local con productores y talleres de la comunidad.',
+        ],
     },
     {
         title: 'Oportunidades',
-        text: ['Solicitudes directas con', 'seguimiento transparente en tu cuenta.'],
+        text: [
+            'Solicitudes directas con',
+            'seguimiento transparente en tu cuenta.',
+        ],
     },
 ];
 
@@ -35,16 +42,16 @@ export function LinkingSection() {
                                 className="h-[12.081px] w-[13.333px]"
                                 inset="-5.52% -5%"
                             />
-                            <span className="text-trim font-arial text-[12px] leading-[16px] font-bold tracking-[0.6px] whitespace-nowrap text-[#133260] uppercase">
+                            <span className="font-arial text-[12px] leading-[16px] font-bold tracking-[0.6px] whitespace-nowrap text-[#133260] uppercase text-trim">
                                 Vinculaciones
                             </span>
                         </div>
                         <div className="flex w-full flex-col items-start gap-[32px]">
-                            <h2 className="text-trim w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618]">
+                            <h2 className="w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618] text-trim">
                                 Alianzas, proveeduría y colaboración directa
                                 entre integrantes
                             </h2>
-                            <p className="text-trim w-full font-arial text-[16px] leading-[26px] text-[#45556c]">
+                            <p className="w-full font-arial text-[16px] leading-[26px] text-[#45556c] text-trim">
                                 El módulo de Vinculaciones conecta necesidades
                                 concretas con capacidades disponibles: encuentra
                                 proveedores confiables, identifica aliados
@@ -68,10 +75,10 @@ export function LinkingSection() {
                             key={item.title}
                             className="flex min-w-px flex-col items-start gap-[12px] rounded-[12px] border border-solid border-[#e2e8f0] bg-[#f8fafc] px-[20px] py-[30px]"
                         >
-                            <h3 className="text-trim w-full font-heading text-[14px] leading-[20px] font-bold text-[#0f172b]">
+                            <h3 className="w-full font-heading text-[14px] leading-[20px] font-bold text-[#0f172b] text-trim">
                                 {item.title}
                             </h3>
-                            <p className="text-trim w-full font-arial text-[12px] leading-[19.5px] text-[#45556c]">
+                            <p className="w-full font-arial text-[12px] leading-[19.5px] text-[#45556c] text-trim">
                                 {item.text.map((line, index) => (
                                     <span key={line}>
                                         {index > 0 && <br />}

@@ -7,10 +7,10 @@ export function CtaSection() {
         <section className="mx-auto flex h-[276px] w-full max-w-[1217px] flex-col items-start rounded-[16px] bg-[#133260] pt-[67px] pr-[73px] pb-[87px] pl-[48px]">
             <div className="flex w-full items-center gap-[117px]">
                 <div className="flex min-w-px flex-1 flex-col items-start gap-[27px]">
-                    <h2 className="text-trim w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-white">
+                    <h2 className="w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-white text-trim">
                         Forma parte de Comunidad 360° desde esta primera etapa
                     </h2>
-                    <p className="text-trim w-full font-arial text-[16px] leading-[26px] text-[#e2e8f0]">
+                    <p className="w-full font-arial text-[16px] leading-[26px] text-[#e2e8f0] text-trim">
                         Crea tu cuenta, registra tu perfil empresarial o
                         profesional y comienza a conectar con aliados,
                         proveedores y oportunidades de la comunidad.
@@ -26,7 +26,7 @@ export function CtaSection() {
                             className="h-[15.6px] w-[17.333px]"
                             inset="-5.56% -5% -5.55% -5%"
                         />
-                        <span className="text-trim font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#133260]">
+                        <span className="font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#133260] text-trim">
                             Registrarme ahora
                         </span>
                     </Link>
@@ -34,8 +34,11 @@ export function CtaSection() {
                         href={login()}
                         className="flex shrink-0 items-center justify-center gap-[10px] rounded-[8px] border border-solid border-[#4f5d72] bg-[#142743] px-[25px] py-[20px]"
                     >
-                        <FillIcon src="icon-directory.svg" className="size-[16px]" />
-                        <span className="text-trim font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-white">
+                        <FillIcon
+                            src="icon-directory.svg"
+                            className="size-[16px]"
+                        />
+                        <span className="font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
                             Explorar directorio
                         </span>
                     </Link>

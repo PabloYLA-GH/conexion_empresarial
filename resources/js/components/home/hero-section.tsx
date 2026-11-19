@@ -10,12 +10,12 @@ export function HeroSection() {
                 <div className="flex w-full flex-col items-start gap-[28px]">
                     <Eyebrow>Ecosistema digital de vinculación</Eyebrow>
                     <div className="flex w-full flex-col items-start gap-[36px]">
-                        <h1 className="text-trim w-full font-heading text-[56px] leading-[60.48px] font-extrabold tracking-[-1.4px] text-[#020618]">
+                        <h1 className="w-full font-heading text-[56px] leading-[60.48px] font-extrabold tracking-[-1.4px] text-[#020618] text-trim">
                             Conecta.
                             <br />
                             Emprende.Crece.
                         </h1>
-                        <p className="text-trim w-full font-arial text-[18px] leading-[29.25px] text-[#45556c]">
+                        <p className="w-full font-arial text-[18px] leading-[29.25px] text-[#45556c] text-trim">
                             Encuentra empresas, emprendedores y profesionistas
                             de nuestra comunidad. Compra local, colabora y
                             accede a capacitación, recursos y programas de

@@ -36,7 +36,7 @@ export default function Directorio() {
             <main>
                 <DirectoryHero />
                 <div className="mt-[96px] border-t border-solid border-[#e2e8f0] bg-[#f8fafc] pt-[92px] pb-[156px]">
-                    <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[32px] lg:flex-row lg:gap-[17px]">
+                    <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[32px] px-[18px] md:px-0 lg:flex-row lg:gap-[17px]">
                         <DirectoryFilters />
                         <section
                             aria-label="Perfiles"

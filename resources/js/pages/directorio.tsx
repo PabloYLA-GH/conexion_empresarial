@@ -60,7 +60,7 @@ export default function Directorio() {
                                     <ProfileCard
                                         key={index}
                                         profile={profile}
-                                        className="min-h-[533px]"
+                                        className="sm:min-h-[533px]"
                                     />
                                 ))}
                             </div>

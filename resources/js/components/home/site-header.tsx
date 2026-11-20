@@ -15,16 +15,19 @@ export function SiteHeader() {
     const { auth } = usePage().props;
 
     return (
-        <header className="relative h-[96px] bg-white">
-            <div className="relative mx-auto h-full w-full max-w-[1216px]">
+        <header className="relative bg-white xl:h-[96px]">
+            <div className="relative mx-auto flex w-full max-w-[1216px] flex-col items-center gap-6 px-4 py-5 xl:block xl:h-full xl:p-0">
                 <Link
                     href="/"
-                    className="absolute top-[71.5px] left-0 -translate-y-1/2 font-heading text-[18px] leading-[28px] font-extrabold tracking-[-0.45px] whitespace-nowrap text-[#133260] text-trim"
+                    className="font-heading text-[18px] leading-[28px] font-extrabold tracking-[-0.45px] whitespace-nowrap text-[#133260] text-trim xl:absolute xl:top-[71.5px] xl:left-0 xl:-translate-y-1/2"
                 >
                     Comunidad 360°
                 </Link>
 
-                <nav aria-label="Navegación principal" className="absolute top-[66px] left-[394.05px] flex w-[358px] items-center justify-between">
+                <nav
+                    aria-label="Navegación principal"
+                    className="flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-3 xl:absolute xl:top-[66px] xl:left-[394.05px] xl:w-[358px] xl:justify-between xl:gap-0"
+                >
                     {nav.map((item) => {
                         const active = isCurrentUrl(item.href);
 
@@ -35,7 +38,7 @@ export function SiteHeader() {
                                 aria-current={active ? 'page' : undefined}
                                 className={`relative font-arial text-[14px] leading-[20px] whitespace-nowrap text-trim ${
                                     active
-                                        ? 'font-bold text-[#133260] after:absolute after:top-[29px] after:right-0 after:left-0 after:h-[2px] after:bg-[#133260] after:content-[" "]'
+                                        ? 'after:content-[" "] font-bold text-[#133260] after:absolute after:top-[calc(100%+4px)] after:right-0 after:left-0 after:h-[2px] after:bg-[#133260] xl:after:top-[29px]'
                                         : 'text-[#45556c]'
                                 }`}
                             >
@@ -45,30 +48,34 @@ export function SiteHeader() {
                     })}
                 </nav>
 
-                <Link
-                    href={auth.user ? dashboard() : login()}
-                    className="absolute top-[66px] left-[1010px] font-arial text-[14px] leading-[20px] whitespace-nowrap text-[#45556c] text-trim"
-                >
-                    {auth.user ? 'Ir al panel' : 'Iniciar sesión'}
-                </Link>
-                {auth.user ? (
+                <div className="flex items-center justify-center gap-5 xl:contents">
                     <Link
-                        href={logout()}
-                        as="button"
-                        className="absolute top-[55px] left-[1115px] flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px] font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white"
+                        href={auth.user ? dashboard() : login()}
+                        className="font-arial text-[14px] leading-[20px] whitespace-nowrap text-[#45556c] text-trim xl:absolute xl:top-[66px] xl:left-[1010px]"
                     >
-                        Cerrar sesión
+                        {auth.user ? 'Ir al panel' : 'Iniciar sesión'}
                     </Link>
-                ) : (
-                    <Link
-                        href={register()}
-                        className="absolute top-[55px] left-[1115px] flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px]"
-                    >
-                        <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
-                            Registrarme
-                        </span>
-                    </Link>
-                )}
+                    {auth.user ? (
+                        <Link
+                            href={logout()}
+                            as="button"
+                            className="flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px] xl:absolute xl:top-[55px] xl:right-0"
+                        >
+                            <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
+                                Cerrar sesión
+                            </span>
+                        </Link>
+                    ) : (
+                        <Link
+                            href={register()}
+                            className="flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px] xl:absolute xl:top-[55px] xl:left-[1115px]"
+                        >
+                            <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
+                                Registrarme
+                            </span>
+                        </Link>
+                    )}
+                </div>
             </div>
 
             <div className="absolute inset-x-0 bottom-0">

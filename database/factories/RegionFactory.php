@@ -22,7 +22,7 @@ class RegionFactory extends Factory
         return [
             'country_code' => fn () => Country::factory()->create()->code,
             'code' => fn (array $attributes) => $attributes['country_code'].'-'.Str::upper(fake()->unique()->lexify('???')),
-            'name' => fake()->state(),
+            'name' => fake()->city(),
         ];
     }
 }

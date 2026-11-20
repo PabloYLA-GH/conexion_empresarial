@@ -18,7 +18,7 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-        $name = Str::ucfirst(fake()->unique()->words(2, true));
+        $name = Str::ucfirst(fake()->unique()->word().' '.fake()->word());
 
         return [
             'parent_id' => null,

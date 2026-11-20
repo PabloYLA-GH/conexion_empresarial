@@ -1,4 +1,5 @@
 # conexion_empresarial
+
 conexion_empresarial
 
 # Conexión Empresarial
@@ -7,6 +8,7 @@ Plataforma empresarial desarrollada con Laravel, React,
 TypeScript, Inertia.js y PostgreSQL.
 
 ## Tecnologías
+
 - Laravel 13
 - React 19 y TypeScript
 - Inertia.js
@@ -15,6 +17,7 @@ TypeScript, Inertia.js y PostgreSQL.
 - Vite
 
 ## Requisitos
+
 - Git
 - Docker con Docker Compose
 - En Windows: Docker Desktop y WSL2
@@ -26,17 +29,22 @@ directamente en el equipo.
 
 ### 1. Clonar el proyecto
 
+```bash
 git clone https://github.com/PabloYLA-GH/conexion_empresarial.git
 cd conexion_empresarial
+```
 
 ### 2. Crear variables de entorno
 
+```bash
 cp .env.example .env
+```
 
 Revisar los puertos y credenciales de desarrollo en .env.
 
 ### 3. Instalar Composer mediante Docker
 
+```bash
 docker run --rm \
   --user "$(id -u):$(id -g)" \
   -e HOME=/tmp \
@@ -44,24 +52,33 @@ docker run --rm \
   -v "$PWD:/app" \
   -w /app \
   composer:2 install --no-scripts --no-interaction
+```
 
 ### 4. Iniciar Docker
 
+```bash
 ./vendor/bin/sail up -d
+```
 
 ### 5. Completar dependencias
 
+```bash
 ./vendor/bin/sail artisan package:discover
 ./vendor/bin/sail npm ci
+```
 
 ### 6. Configurar Laravel
 
+```bash
 ./vendor/bin/sail artisan key:generate
 ./vendor/bin/sail artisan migrate
+```
 
 ### 7. Iniciar frontend
 
+```bash
 ./vendor/bin/sail npm run dev
+```
 
 ## Acceso
 
@@ -70,8 +87,10 @@ Vite: http://localhost:5173
 
 ## Verificación
 
+```bash
 ./vendor/bin/sail artisan test
 ./vendor/bin/sail npm run build
+```
 
 ## Trabajo colaborativo
 

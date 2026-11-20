@@ -14,7 +14,7 @@ export function DirectoryHero() {
                 <div className="flex w-full flex-col items-start gap-[28px]">
                     <Eyebrow>EMPRESARIOS</Eyebrow>
                     <div className="flex w-full flex-col items-start gap-[36px]">
-                        <h1 className="w-full font-heading text-[40px] leading-[44px] font-extrabold tracking-[-1px] text-[#020618] text-trim md:text-[56px] md:leading-[60.48px] md:tracking-[-1.4px]">
+                        <h1 className="w-full font-heading text-[40px] leading-[50px] font-extrabold tracking-[-1px] text-[#020618] text-trim md:text-[56px] md:leading-[60.48px] md:tracking-[-1.4px]">
                             Descubre quiénes integran esta gran Comunidad
                         </h1>
                         <p className="w-full font-arial text-[16px] leading-[24px] text-[#45556c] text-trim md:text-[18px] md:leading-[29.25px]">

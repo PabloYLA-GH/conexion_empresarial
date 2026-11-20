@@ -45,7 +45,7 @@ export function SiteHeader() {
 
                 <div
                     id="menu-principal"
-                    className={`${menuOpen ? 'flex' : 'hidden'} flex-col items-center gap-6 pt-2 pb-5 xl:relative xl:block xl:h-full xl:p-0`}
+                    className={`${menuOpen ? 'flex' : 'hidden'} absolute inset-x-0 top-full z-40 h-[calc(100vh-56px)] flex-col items-stretch overflow-y-auto border-t border-solid border-[#e2e8f0] bg-[#f8fafc] px-[18px] pt-[40px] pb-[32px] xl:relative xl:inset-auto xl:z-auto xl:block xl:h-full xl:overflow-visible xl:border-0 xl:bg-transparent xl:p-0`}
                 >
                     <Link
                         href="/"
@@ -56,7 +56,7 @@ export function SiteHeader() {
 
                     <nav
                         aria-label="Navegación principal"
-                        className="flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-3 xl:absolute xl:top-[66px] xl:left-[394.05px] xl:w-[358px] xl:justify-between xl:gap-0"
+                        className="flex w-full flex-col items-start xl:absolute xl:top-[66px] xl:left-[394.05px] xl:w-[358px] xl:flex-row xl:items-center xl:justify-between xl:gap-0"
                     >
                         {nav.map((item) => {
                             const active = isCurrentUrl(item.href);
@@ -66,9 +66,9 @@ export function SiteHeader() {
                                     key={item.href}
                                     href={item.href}
                                     aria-current={active ? 'page' : undefined}
-                                    className={`relative font-arial text-[14px] leading-[20px] whitespace-nowrap text-trim ${
+                                    className={`relative py-[9px] font-arial text-[16px] leading-[20px] whitespace-nowrap text-trim xl:py-0 xl:text-[14px] ${
                                         active
-                                            ? 'after:content-[" "] font-bold text-[#133260] after:absolute after:top-[calc(100%+4px)] after:right-0 after:left-0 after:h-[2px] after:bg-[#133260] xl:after:top-[29px]'
+                                            ? 'xl:after:content-[" "] font-bold text-[#133260] xl:after:absolute xl:after:top-[29px] xl:after:right-0 xl:after:left-0 xl:after:h-[2px] xl:after:bg-[#133260]'
                                             : 'text-[#45556c]'
                                     }`}
                                 >
@@ -78,10 +78,10 @@ export function SiteHeader() {
                         })}
                     </nav>
 
-                    <div className="flex items-center justify-center gap-5 xl:contents">
+                    <div className="mt-[40px] flex w-full flex-col gap-[12px] xl:mt-0 xl:contents">
                         <Link
                             href={auth.user ? dashboard() : login()}
-                            className="font-arial text-[14px] leading-[20px] whitespace-nowrap text-[#45556c] text-trim xl:absolute xl:top-[66px] xl:left-[1010px]"
+                            className="flex h-[46px] w-full items-center justify-center rounded-[8px] border border-solid border-[#cad5e2] bg-white font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b] text-trim xl:absolute xl:top-[66px] xl:left-[1010px] xl:h-auto xl:w-auto xl:border-0 xl:bg-transparent xl:font-normal xl:text-[#45556c]"
                         >
                             {auth.user ? 'Ir al panel' : 'Iniciar sesión'}
                         </Link>
@@ -98,7 +98,7 @@ export function SiteHeader() {
                         ) : (
                             <Link
                                 href={register()}
-                                className="flex items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px] xl:absolute xl:top-[55px] xl:left-[1115px]"
+                                className="flex h-[46px] w-full items-center justify-center rounded-[8px] bg-[#133260] px-[15px] py-[12px] xl:absolute xl:top-[55px] xl:left-[1115px] xl:h-auto xl:w-auto"
                             >
                                 <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
                                     Registrarme

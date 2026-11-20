@@ -65,6 +65,15 @@ class ProfileDataTest extends TestCase
         ProfileContact::factory()->for($profile)->channel(ContactChannel::Email)->primary()->create();
     }
 
+    public function test_phone_contacts_are_stored_in_e164_format()
+    {
+        foreach ([ContactChannel::Whatsapp, ContactChannel::Phone] as $channel) {
+            $contact = ProfileContact::factory()->channel($channel)->create();
+
+            $this->assertMatchesRegularExpression('/^\+52\d{10}$/', $contact->value);
+        }
+    }
+
     public function test_offerings_survive_the_deletion_of_their_category()
     {
         $category = Category::factory()->create();

@@ -75,15 +75,12 @@ final class MexicanData
     }
 
     /**
-     * A Mexican phone number in international format, e.g. "+52 33 1234 5678".
+     * A Mexican phone number as stored in the database: E.164, no spaces, e.g. "+523312345678".
+     * Area code plus local number always add up to 10 digits.
      */
     public static function phone(string $areaCode): string
     {
-        $local = fake()->numerify(str_repeat('#', 10 - strlen($areaCode)));
-
-        return strlen($areaCode) === 2
-            ? sprintf('+52 %s %s %s', $areaCode, substr($local, 0, 4), substr($local, 4))
-            : sprintf('+52 %s %s %s', $areaCode, substr($local, 0, 3), substr($local, 3));
+        return '+52'.$areaCode.fake()->numerify(str_repeat('#', 10 - strlen($areaCode)));
     }
 
     /**

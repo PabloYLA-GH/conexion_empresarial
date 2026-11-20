@@ -69,5 +69,6 @@ Seguir el estilo de `app/Models/User.php`:
 - Faker no tiene locale `es_MX`: si se configura, cae a inglés. El proyecto usa `APP_FAKER_LOCALE=es_ES` (también en la CI); tu `.env` local debe tener el mismo valor.
 - No usar formateadores de Faker que dependen del idioma (`state()`, `province()`, `words(n, true)`…). Lo mexicano (ciudades, estados, ladas, CP, razones sociales) sale de `database/data/mx.php` a través de `Database\Factories\Support\MexicanData`.
 - Los dominios de correo y web de prueba usan `example.com`, que está reservado.
+- Los teléfonos (WhatsApp y teléfono) se guardan en formato E.164, sin espacios: `+523312345678`. El formato para mostrarlos se aplica en la interfaz.
 - Datos de catálogo (países, estados, tipos de integrante, categorías) en `CatalogSeeder`: debe poder ejecutarse varias veces sin duplicar (`upsert`/`updateOrCreate`) y es apto para producción.
 - Datos falsos de demostración en `DemoProfileSeeder`: solo se ejecutan en `local` y `testing`.

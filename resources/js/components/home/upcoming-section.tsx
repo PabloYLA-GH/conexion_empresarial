@@ -26,7 +26,7 @@ export function UpcomingSection() {
             id="proximamente"
             className="mx-auto flex min-h-[334px] w-full max-w-[1217px] flex-col items-start gap-[35px]"
         >
-            <div className="flex w-full items-end gap-[167px]">
+            <div className="flex w-full flex-col items-start gap-[24px] lg:flex-row lg:items-end lg:gap-[167px]">
                 <div className="flex min-w-px flex-1 flex-col items-start gap-[26px]">
                     <div className="flex items-center gap-[9px]">
                         <Glyph
@@ -59,11 +59,11 @@ export function UpcomingSection() {
                 </TextLink>
             </div>
 
-            <div className="grid w-full grid-cols-4 gap-[16px]">
+            <div className="grid w-full grid-cols-1 gap-[16px] sm:grid-cols-2 lg:grid-cols-4">
                 {upcoming.map((item) => (
                     <article
                         key={item.title}
-                        className="flex min-w-px flex-col items-start rounded-[12px] border border-solid border-[#e2e8f0] bg-white pt-[23px] pr-[55px] pb-[27px] pl-[30px]"
+                        className="flex min-w-px flex-col items-start rounded-[12px] border border-solid border-[#e2e8f0] bg-white pt-[23px] pr-[24px] pb-[27px] pl-[24px] lg:pr-[55px] lg:pl-[30px]"
                     >
                         <div className="flex w-full flex-col items-start gap-[17px]">
                             <span className="flex items-center justify-center rounded-[4px] border border-solid border-[#e2e8f0] bg-[#f8fafc] px-[10px] py-[6px]">

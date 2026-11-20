@@ -12,7 +12,7 @@ export type Vinculacion = {
 
 export function VinculacionCard({ item }: { item: Vinculacion }) {
     return (
-        <article className="flex h-[271px] w-[395px] flex-col rounded-[12px] border border-solid border-[#e2e8f0] bg-white pt-[27px] pr-[20px] pb-[27px] pl-[21px]">
+        <article className="flex min-h-[271px] w-full flex-col rounded-[12px] border border-solid border-[#e2e8f0] bg-white pt-[27px] pr-[20px] pb-[27px] pl-[21px] lg:h-[271px]">
             <div className="flex items-center justify-between">
                 <span className="rounded-[4px] border border-solid border-[#cad5e2] bg-white px-[8px] py-[3px] font-arial text-[10px] leading-[14px] font-bold tracking-[0.3px] whitespace-nowrap text-[#133260] uppercase">
                     {item.badge}

@@ -31,10 +31,10 @@ export function LinkingSection() {
     return (
         <section
             id="vinculaciones"
-            className="mx-auto flex h-[463px] w-full max-w-[1217px] flex-col items-start rounded-[16px] border border-solid border-[#e2e8f0] bg-white p-[66px]"
+            className="mx-auto flex w-full max-w-[1217px] flex-col items-start rounded-[16px] border border-solid border-[#e2e8f0] bg-white p-[24px] lg:h-[463px] lg:p-[66px]"
         >
-            <div className="flex w-full items-center gap-[70px]">
-                <div className="flex w-[484px] shrink-0 flex-col items-start gap-[39px]">
+            <div className="flex w-full flex-col items-start gap-[40px] lg:flex-row lg:items-center lg:gap-[70px]">
+                <div className="flex w-full shrink-0 flex-col items-start gap-[39px] lg:w-[484px]">
                     <div className="flex w-full flex-col items-start gap-[19px]">
                         <div className="flex items-center gap-[9px]">
                             <Glyph
@@ -69,7 +69,7 @@ export function LinkingSection() {
                     </PrimaryButton>
                 </div>
 
-                <div className="grid min-w-px flex-1 grid-cols-2 gap-[12px] gap-y-[15px]">
+                <div className="grid w-full min-w-px flex-1 grid-cols-1 gap-[12px] gap-y-[15px] sm:grid-cols-2">
                     {items.map((item) => (
                         <div
                             key={item.title}

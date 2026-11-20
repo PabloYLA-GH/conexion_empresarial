@@ -23,20 +23,20 @@ export default function Vinculaciones() {
         <>
             <Head title="Vinculaciones" />
             <main>
-                    <VinculacionHero />
-                    <div className="mt-[101px] bg-[#f8fafc] pb-[285px]">
-                        <div className="mx-auto flex w-full max-w-[1216px] flex-col gap-[18px]">
-                            <VinculacionFilters />
-                            <div className="grid grid-cols-3 gap-x-[15.5px] gap-y-[19px]">
-                                {items.map((vinculacion, index) => (
-                                    <VinculacionCard
-                                        key={index}
-                                        item={vinculacion}
-                                    />
-                                ))}
-                            </div>
+                <VinculacionHero />
+                <div className="mt-[101px] bg-[#f8fafc] pb-[285px]">
+                    <div className="mx-auto flex w-full max-w-[1216px] flex-col gap-[18px]">
+                        <VinculacionFilters />
+                        <div className="grid grid-cols-1 gap-x-[15.5px] gap-y-[19px] sm:grid-cols-2 lg:grid-cols-3">
+                            {items.map((vinculacion, index) => (
+                                <VinculacionCard
+                                    key={index}
+                                    item={vinculacion}
+                                />
+                            ))}
                         </div>
                     </div>
+                </div>
             </main>
         </>
     );

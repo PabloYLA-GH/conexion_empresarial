@@ -60,7 +60,7 @@ export function ProfileCard({
                     <h3 className="w-full font-heading text-[16px] leading-[20px] font-bold text-[#0f172b] text-trim">
                         {profile.name}
                     </h3>
-                    <p className="w-[346px] font-arial text-[12px] leading-[19.5px] text-[#45556c] text-trim">
+                    <p className="w-full font-arial text-[12px] leading-[19.5px] text-[#45556c] text-trim">
                         {profile.tagline}
                     </p>
                 </div>

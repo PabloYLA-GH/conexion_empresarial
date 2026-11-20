@@ -3,8 +3,8 @@ import { register } from '@/routes';
 
 export function ProximamenteCta() {
     return (
-        <section className="mx-auto flex h-[276px] w-full max-w-[1216px] items-center justify-between rounded-[16px] bg-[#133260] pt-[61px] pr-[73px] pb-[61px] pl-[48px]">
-            <div className="flex w-[560px] flex-col items-start gap-[16px]">
+        <section className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[24px] rounded-[16px] bg-[#133260] p-[24px] lg:h-[276px] lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:pt-[61px] lg:pr-[73px] lg:pb-[61px] lg:pl-[48px]">
+            <div className="flex w-full flex-col items-start gap-[16px] lg:w-[560px]">
                 <h2 className="w-full font-heading text-[30px] leading-[31px] font-extrabold tracking-[-0.75px] text-white text-trim">
                     Comienza hoy en los módulos activos de
                     <br />
@@ -17,10 +17,10 @@ export function ProximamenteCta() {
                 </p>
             </div>
 
-            <div className="flex shrink-0 items-center gap-[10px]">
+            <div className="flex w-full shrink-0 flex-col gap-[10px] sm:w-auto sm:flex-row sm:items-center">
                 <a
                     href="/directorio"
-                    className="flex h-[56px] w-[166px] items-center justify-center gap-[10px] rounded-[8px] border border-solid border-[#4f5d72] bg-[#142743]"
+                    className="flex h-[56px] w-full items-center justify-center gap-[10px] rounded-[8px] border border-solid border-[#4f5d72] bg-[#142743] sm:w-[166px]"
                 >
                     <Compass
                         aria-hidden
@@ -34,7 +34,7 @@ export function ProximamenteCta() {
                 </a>
                 <a
                     href={register().url}
-                    className="flex h-[56px] w-[166px] items-center justify-center gap-[10px] rounded-[8px] border border-solid border-white bg-white"
+                    className="flex h-[56px] w-full items-center justify-center gap-[10px] rounded-[8px] border border-solid border-white bg-white sm:w-[166px]"
                 >
                     <UserPlus
                         aria-hidden

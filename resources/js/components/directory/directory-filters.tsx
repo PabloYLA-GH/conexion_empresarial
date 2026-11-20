@@ -148,7 +148,7 @@ export function DirectoryFilters() {
         <form
             role="search"
             aria-label="Filtros y búsqueda"
-            className="flex w-[280px] shrink-0 items-start self-start rounded-[12px] border border-solid border-[#e2e8f0] bg-white px-[20px] pt-[24px] pb-[35px]"
+            className="flex w-full shrink-0 items-start self-start rounded-[12px] border border-solid border-[#e2e8f0] bg-white px-[20px] pt-[24px] pb-[35px] lg:w-[280px]"
         >
             <div className="flex min-w-px flex-1 flex-col items-start gap-[24px]">
                 <div className="flex w-full flex-col items-center gap-[14px]">

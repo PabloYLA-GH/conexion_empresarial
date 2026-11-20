@@ -30,11 +30,11 @@ const dimensions = [
 
 export function ConceptSection() {
     return (
-        <div className="mx-auto flex w-full max-w-[1216px] items-center justify-between">
+        <div className="mx-auto flex w-full max-w-[1216px] flex-col gap-[40px] lg:flex-row lg:items-center lg:justify-between lg:gap-0">
             <SectionHeading
                 eyebrow="Concepto y filosofía"
                 title="¿Qué es Comunidad 360°?"
-                className="w-[454px]"
+                className="w-full lg:w-[454px]"
             >
                 Comunidad 360° no es solamente un directorio empresarial. Es un
                 ecosistema pensado para articular capacidades, conocimientos,
@@ -42,7 +42,7 @@ export function ConceptSection() {
                 colectivo en cinco dimensiones complementarias.
             </SectionHeading>
 
-            <ol className="flex min-h-[599px] w-[578px] flex-col items-start bg-white p-[20px]">
+            <ol className="flex w-full flex-col items-start bg-white p-[20px] lg:min-h-[599px] lg:w-[578px]">
                 {dimensions.map((item) => (
                     <li
                         key={item.number}

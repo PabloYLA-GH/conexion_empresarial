@@ -34,9 +34,9 @@ export function EcosystemSection() {
     return (
         <section
             id="directorio"
-            className="mx-auto flex h-[506px] w-full max-w-[1216px] flex-col gap-[59px]"
+            className="mx-auto flex w-full max-w-[1216px] flex-col gap-[40px] lg:h-[506px] lg:gap-[59px]"
         >
-            <div className="flex items-end justify-end gap-[122px]">
+            <div className="flex flex-col items-start gap-[24px] lg:flex-row lg:items-end lg:justify-end lg:gap-[122px]">
                 <SectionHeading
                     eyebrow="Concepto y filosofía"
                     title="¿Quiénes integran el ecosistema?"
@@ -49,14 +49,14 @@ export function EcosystemSection() {
                     href="/directorio"
                     arrow="arrow-directory.svg"
                     arrowClassName="h-[9.333px] w-[9.334px]"
-                    className="w-[175.333px] justify-between"
+                    className="w-[175.333px] shrink-0 justify-between"
                     textClassName="text-[14px] text-center"
                 >
                     Ver directorio completo
                 </TextLink>
             </div>
 
-            <div className="grid grid-cols-5 items-start gap-[18px]">
+            <div className="grid grid-cols-1 items-start gap-[18px] sm:grid-cols-2 lg:grid-cols-5">
                 {profiles.map((profile) => (
                     <article key={profile.title} className="flex flex-col">
                         <div className="relative h-[172px] w-full rounded-t-[12px] border-x border-t border-solid border-[#e2e8f0]">

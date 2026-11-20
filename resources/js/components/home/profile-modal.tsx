@@ -117,7 +117,7 @@ export function ProfileModal({
                         <Divider />
 
                         <Section title="Productos y servicios">
-                            <ul className="grid w-full grid-cols-2 gap-[16px]">
+                            <ul className="grid w-full grid-cols-1 gap-[16px] sm:grid-cols-2">
                                 {profile.products.map((product) => (
                                     <li
                                         key={product}
@@ -147,7 +147,7 @@ export function ProfileModal({
                         <Divider />
 
                         <Section title="Información de contacto">
-                            <div className="grid w-full grid-cols-[298px_1fr] gap-[16px]">
+                            <div className="grid w-full grid-cols-1 gap-[16px] sm:grid-cols-[298px_1fr]">
                                 <p className="flex h-[56px] items-center gap-[8px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-[20px] font-arial text-[12px] text-[#314158]">
                                     <Phone
                                         aria-hidden

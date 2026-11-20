@@ -28,15 +28,15 @@ function Chip({ active, children }: { active?: boolean; children: string }) {
 
 export function VinculacionFilters() {
     return (
-        <div className="flex w-full flex-col gap-[23px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-[23px] py-[23px]">
-            <div className="flex items-center gap-[8px]">
+        <div className="flex w-full flex-col gap-[23px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-[16px] py-[20px] lg:px-[23px] lg:py-[23px]">
+            <div className="flex flex-wrap items-center gap-[8px]">
                 {categories.map((label, index) => (
                     <Chip key={label} active={index === 0}>
                         {label}
                     </Chip>
                 ))}
 
-                <label className="ml-auto flex h-[32px] w-[287px] items-center gap-[8px] rounded-[8px] border border-solid border-[#cad5e2] px-[12px]">
+                <label className="flex h-[32px] w-full items-center gap-[8px] rounded-[8px] border border-solid border-[#cad5e2] px-[12px] lg:ml-auto lg:w-[287px]">
                     <Search
                         aria-hidden
                         size={13}
@@ -51,7 +51,7 @@ export function VinculacionFilters() {
                 </label>
             </div>
 
-            <div className="flex items-center gap-[10px]">
+            <div className="flex flex-wrap items-center gap-[10px]">
                 <span className="font-arial text-[11px] leading-[16px] font-bold tracking-[0.5px] text-[#62748e] uppercase">
                     Estado
                 </span>

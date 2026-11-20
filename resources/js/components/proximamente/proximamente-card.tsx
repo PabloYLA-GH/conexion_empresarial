@@ -11,7 +11,7 @@ export function ProximamenteCard({ item }: { item: Proximamente }) {
     const Icon = item.icon;
 
     return (
-        <article className="flex h-[227px] w-[344px] flex-col rounded-[12px] border border-solid border-[#e2e8f0] bg-white pt-[28px] pr-[23px] pl-[23px]">
+        <article className="flex min-h-[227px] w-full flex-col rounded-[12px] border border-solid border-[#e2e8f0] bg-white pt-[28px] pr-[23px] pl-[23px] lg:h-[227px]">
             <div className="flex items-center justify-between">
                 <span className="flex size-[40px] shrink-0 items-center justify-center rounded-[8px] bg-[#f8fafc] text-[#133260]">
                     <Icon aria-hidden size={18} strokeWidth={1.75} />

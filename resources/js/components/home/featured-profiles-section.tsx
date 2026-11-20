@@ -20,7 +20,7 @@ const profiles: Profile[] = [
 export function FeaturedProfilesSection() {
     return (
         <section className="mx-auto flex w-full max-w-[1216px] flex-col gap-[77px]">
-            <div className="flex items-end justify-end gap-[122px]">
+            <div className="flex flex-col items-start gap-[24px] lg:flex-row lg:items-end lg:justify-end lg:gap-[122px]">
                 <SectionHeading
                     eyebrow="PERFILES DESTACADOS"
                     title="Detrás de cada empresa hay una historia."
@@ -38,7 +38,7 @@ export function FeaturedProfilesSection() {
                 </OutlineButton>
             </div>
 
-            <div className="grid grid-cols-3 gap-x-[17px] gap-y-[22px]">
+            <div className="grid grid-cols-1 gap-x-[17px] gap-y-[22px] sm:grid-cols-2 lg:grid-cols-3">
                 {profiles.map((profile) => (
                     <ProfileCard
                         key={profile.image}

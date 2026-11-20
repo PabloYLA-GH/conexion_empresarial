@@ -4,8 +4,8 @@ import { FillIcon, Glyph } from './glyph';
 
 export function CtaSection() {
     return (
-        <section className="mx-auto flex h-[276px] w-full max-w-[1217px] flex-col items-start rounded-[16px] bg-[#133260] pt-[67px] pr-[73px] pb-[87px] pl-[48px]">
-            <div className="flex w-full items-center gap-[117px]">
+        <section className="mx-auto flex w-full max-w-[1217px] flex-col items-start rounded-[16px] bg-[#133260] p-[24px] lg:h-[276px] lg:pt-[67px] lg:pr-[73px] lg:pb-[87px] lg:pl-[48px]">
+            <div className="flex w-full flex-col items-start gap-[32px] lg:flex-row lg:items-center lg:gap-[117px]">
                 <div className="flex min-w-px flex-1 flex-col items-start gap-[27px]">
                     <h2 className="w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-white text-trim">
                         Forma parte de Comunidad 360° desde esta primera etapa
@@ -16,7 +16,7 @@ export function CtaSection() {
                         proveedores y oportunidades de la comunidad.
                     </p>
                 </div>
-                <div className="flex shrink-0 items-center gap-[9px]">
+                <div className="flex w-full shrink-0 flex-col items-stretch gap-[9px] sm:flex-row sm:items-center lg:w-auto">
                     <Link
                         href={register()}
                         className="flex shrink-0 items-center justify-center gap-[10px] rounded-[8px] border border-solid border-white bg-white px-[25px] py-[20px]"

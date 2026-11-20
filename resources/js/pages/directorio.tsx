@@ -34,39 +34,39 @@ export default function Directorio() {
         <>
             <Head title="Directorio" />
             <main>
-                    <DirectoryHero />
-                    <div className="mt-[96px] border-t border-solid border-[#e2e8f0] bg-[#f8fafc] pt-[92px] pb-[156px]">
-                        <div className="mx-auto flex w-full max-w-[1216px] items-start gap-[17px]">
-                            <DirectoryFilters />
-                            <section
-                                aria-label="Perfiles"
-                                className="flex min-w-px flex-1 flex-col items-start gap-[36px]"
-                            >
-                                <p className="flex h-[9px] items-center gap-[9px] font-arial text-[12px] leading-[16px] whitespace-nowrap text-[#45556c]">
-                                    <span>
-                                        Mostrando{' '}
-                                        <strong className="font-bold text-[#0f172b]">
-                                            456{' '}
-                                        </strong>
-                                        perfiles{' '}
-                                    </span>
-                                    <span className="text-[#90a1b9]">·</span>
-                                    <span>
-                                        436 registros aprobados en comunidad
-                                    </span>
-                                </p>
-                                <div className="grid w-full grid-cols-3 gap-x-[18.5px] gap-y-[18px]">
-                                    {profiles.map((profile, index) => (
-                                        <ProfileCard
-                                            key={index}
-                                            profile={profile}
-                                            className="min-h-[533px]"
-                                        />
-                                    ))}
-                                </div>
-                            </section>
-                        </div>
+                <DirectoryHero />
+                <div className="mt-[96px] border-t border-solid border-[#e2e8f0] bg-[#f8fafc] pt-[92px] pb-[156px]">
+                    <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[32px] lg:flex-row lg:gap-[17px]">
+                        <DirectoryFilters />
+                        <section
+                            aria-label="Perfiles"
+                            className="flex w-full min-w-px flex-1 flex-col items-start gap-[36px]"
+                        >
+                            <p className="flex flex-wrap items-center gap-[9px] font-arial text-[12px] leading-[16px] text-[#45556c]">
+                                <span>
+                                    Mostrando{' '}
+                                    <strong className="font-bold text-[#0f172b]">
+                                        456{' '}
+                                    </strong>
+                                    perfiles{' '}
+                                </span>
+                                <span className="text-[#90a1b9]">·</span>
+                                <span>
+                                    436 registros aprobados en comunidad
+                                </span>
+                            </p>
+                            <div className="grid w-full grid-cols-1 gap-x-[18.5px] gap-y-[18px] sm:grid-cols-2 lg:grid-cols-3">
+                                {profiles.map((profile, index) => (
+                                    <ProfileCard
+                                        key={index}
+                                        profile={profile}
+                                        className="min-h-[533px]"
+                                    />
+                                ))}
+                            </div>
+                        </section>
                     </div>
+                </div>
             </main>
         </>
     );

@@ -63,20 +63,20 @@ export default function Proximamente() {
         <>
             <Head title="Próximamente" />
             <main>
-                    <ProximamenteHero />
-                    <div className="mt-[103px] bg-[#f8fafc] pt-[47px] pb-[279px]">
-                        <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[77px]">
-                            <div className="grid w-[1068px] grid-cols-3 gap-x-[18px] gap-y-[26px]">
-                                {items.map((item) => (
-                                    <ProximamenteCard
-                                        key={item.number + item.title}
-                                        item={item}
-                                    />
-                                ))}
-                            </div>
-                            <ProximamenteCta />
+                <ProximamenteHero />
+                <div className="mt-[103px] bg-[#f8fafc] pt-[47px] pb-[279px]">
+                    <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[77px]">
+                        <div className="grid w-full grid-cols-1 gap-x-[18px] gap-y-[26px] sm:grid-cols-2 lg:grid-cols-3">
+                            {items.map((item) => (
+                                <ProximamenteCard
+                                    key={item.number + item.title}
+                                    item={item}
+                                />
+                            ))}
                         </div>
+                        <ProximamenteCta />
                     </div>
+                </div>
             </main>
         </>
     );

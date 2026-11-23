@@ -65,7 +65,7 @@ export default function Proximamente() {
             <main>
                 <ProximamenteHero />
                 <div className="mt-[103px] bg-[#f8fafc] pt-[47px] pb-[279px]">
-                    <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[77px]">
+                    <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[77px] px-[18px] md:px-0">
                         <div className="grid w-full grid-cols-1 gap-x-[18px] gap-y-[26px] sm:grid-cols-2 lg:grid-cols-3">
                             {items.map((item) => (
                                 <ProximamenteCard

@@ -43,7 +43,7 @@ export function ProfileCard({
     return (
         <article className={`flex w-full flex-col items-start ${className}`}>
             <div
-                className={`relative h-[173px] w-full rounded-t-[12px] border-x border-t border-solid border-[#e2e8f0] sm:h-[245px] ${
+                className={`relative h-[245px] w-full rounded-t-[12px] border-x border-t border-solid border-[#e2e8f0] ${
                     profile.image ? '' : 'bg-[#e6ecf3]'
                 }`}
             >

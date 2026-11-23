@@ -5,12 +5,12 @@ export function ProximamenteHero() {
         <section className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-[19px] pt-[40px] lg:h-[287px] lg:pt-[70px]">
             <Eyebrow>Hoja de ruta del ecosistema</Eyebrow>
             <div className="flex w-[801px] max-w-full flex-col items-start gap-[14px]">
-                <h1 className="w-full font-heading text-[40px] leading-[44px] font-extrabold tracking-[-1px] text-[#020618] text-trim md:text-[56px] md:leading-[59px] md:tracking-[-1.4px]">
+                <h1 className="w-full font-heading text-[50px] leading-[60.48px] font-extrabold tracking-[-1.4px] text-[#020618] text-trim md:text-[56px] md:leading-[59px]">
                     Un ecosistema que sigue
                     <br />
                     creciendo.
                 </h1>
-                <p className="w-full font-arial text-[18px] leading-[28px] text-[#45556c]">
+                <p className="w-full font-arial text-[18px] leading-[29.25px] text-[#45556c] md:leading-[28px]">
                     Estamos construyendo nuevas herramientas para fortalecer los
                     negocios, compartir conocimientos y generar más
                     oportunidades dentro de nuestra comunidad.

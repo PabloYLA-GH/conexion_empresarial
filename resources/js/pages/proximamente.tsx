@@ -51,7 +51,7 @@ const items: Proximamente[] = [
         text: 'Directorio de productores locales, iniciativas de autoconsumo y economía comunitaria.',
     },
     {
-        number: '05.',
+        number: '07.',
         icon: Newspaper,
         title: 'Noticias y casos de éxito',
         text: 'Historias, proyectos, noticias y experiencias de los integrantes.',

@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
+use App\Enums\UserApprovalStatus;
+use App\Enums\UserRole;
 use Database\Factories\UserFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
@@ -20,6 +24,11 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
  * @property string $email
  * @property Carbon|null $email_verified_at
  * @property string $password
+ * @property UserRole $role
+ * @property UserApprovalStatus $approval_status
+ * @property int|null $approved_by
+ * @property Carbon|null $approved_at
+ * @property string|null $rejection_reason
  * @property string|null $two_factor_secret
  * @property string|null $two_factor_recovery_codes
  * @property Carbon|null $two_factor_confirmed_at
@@ -35,6 +44,16 @@ class User extends Authenticatable implements MustVerifyEmail, PasskeyUser
     use HasFactory, Notifiable, PasskeyAuthenticatable, TwoFactorAuthenticatable;
 
     /**
+     * Defaults that mirror the database, so new instances are consistent before saving.
+     *
+     * @var array<string, mixed>
+     */
+    protected $attributes = [
+        'role' => UserRole::Member->value,
+        'approval_status' => UserApprovalStatus::Pending->value,
+    ];
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -45,6 +64,49 @@ class User extends Authenticatable implements MustVerifyEmail, PasskeyUser
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'two_factor_confirmed_at' => 'datetime',
+            'role' => UserRole::class,
+            'approval_status' => UserApprovalStatus::class,
+            'approved_at' => 'datetime',
         ];
+    }
+
+    /**
+     * @return HasMany<Profile, $this>
+     */
+    public function profiles(): HasMany
+    {
+        return $this->hasMany(Profile::class);
+    }
+
+    /**
+     * @return BelongsTo<User, $this>
+     */
+    public function approver(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'approved_by');
+    }
+
+    /**
+     * @return HasMany<User, $this>
+     */
+    public function approvedAccounts(): HasMany
+    {
+        return $this->hasMany(User::class, 'approved_by');
+    }
+
+    /**
+     * @return HasMany<Opportunity, $this>
+     */
+    public function reviewedOpportunities(): HasMany
+    {
+        return $this->hasMany(Opportunity::class, 'reviewed_by');
+    }
+
+    /**
+     * @return HasMany<OpportunityApplication, $this>
+     */
+    public function submittedApplications(): HasMany
+    {
+        return $this->hasMany(OpportunityApplication::class, 'submitted_by_user_id');
     }
 }

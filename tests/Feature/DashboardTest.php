@@ -18,7 +18,7 @@ class DashboardTest extends TestCase
 
     public function test_authenticated_users_can_visit_the_dashboard()
     {
-        $user = User::factory()->create();
+        $user = User::factory()->approved()->create();
         $this->actingAs($user);
 
         $response = $this->get(route('dashboard'));
@@ -27,7 +27,7 @@ class DashboardTest extends TestCase
 
     public function test_unverified_users_can_visit_the_dashboard()
     {
-        $user = User::factory()->unverified()->create();
+        $user = User::factory()->approved()->unverified()->create();
 
         $response = $this->actingAs($user)->get(route('dashboard'));
 

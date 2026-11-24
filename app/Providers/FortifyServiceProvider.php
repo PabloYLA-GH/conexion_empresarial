@@ -4,15 +4,26 @@ namespace App\Providers;
 
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
+use App\Enums\UserApprovalStatus;
+use App\Http\Controllers\Auth\RegisteredMemberController;
+use App\Http\Responses\PendingRegistrationResponse;
+use App\Models\Category;
+use App\Models\MemberType;
+use App\Models\Region;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Http\Controllers\RegisteredUserController;
+use Laravel\Fortify\Contracts\RegisterResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -21,7 +32,8 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(RegisteredUserController::class, RegisteredMemberController::class);
+        $this->app->singleton(RegisterResponse::class, PendingRegistrationResponse::class);
     }
 
     /**
@@ -41,6 +53,30 @@ class FortifyServiceProvider extends ServiceProvider
     {
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
         Fortify::createUsersUsing(CreateNewUser::class);
+        Fortify::authenticateUsing(function (Request $request): ?User {
+            $user = User::query()->where('email', $request->input('email'))->first();
+
+            if (! $user || ! Hash::check((string) $request->input('password'), $user->password)) {
+                return null;
+            }
+
+            if ($user->approval_status !== UserApprovalStatus::Approved) {
+                throw ValidationException::withMessages([
+                    'email' => match ($user->approval_status) {
+                        UserApprovalStatus::Pending => 'Tu cuenta aún está pendiente de aprobación.',
+                        UserApprovalStatus::Rejected => 'Tu solicitud de cuenta fue rechazada.',
+                        UserApprovalStatus::Suspended => 'Tu cuenta está suspendida.',
+                        default => 'Tu cuenta no tiene acceso.',
+                    },
+                ]);
+            }
+
+            if (Hash::needsRehash($user->password)) {
+                $user->forceFill(['password' => $request->input('password')])->save();
+            }
+
+            return $user;
+        });
     }
 
     /**
@@ -69,6 +105,9 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::registerView(fn () => Inertia::render('auth/register', [
             'passwordRules' => Password::defaults()->toPasswordRulesString(),
+            'memberTypes' => MemberType::query()->whereIn('slug', ['empresarios', 'profesionistas'])->orderBy('name')->get(['slug', 'name']),
+            'categories' => Category::query()->orderBy('name')->get(['id', 'name']),
+            'regions' => Region::query()->where('country_code', 'MX')->orderBy('name')->get(['id', 'name']),
         ]));
 
         Fortify::twoFactorChallengeView(fn () => Inertia::render('auth/two-factor-challenge'));

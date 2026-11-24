@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Enums\UserApprovalStatus;
+use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -43,6 +45,29 @@ class UserFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
+        ]);
+    }
+
+    /**
+     * Indicate that the user is a platform administrator.
+     */
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'role' => UserRole::Admin,
+            'approval_status' => UserApprovalStatus::Approved,
+            'approved_at' => now(),
+        ]);
+    }
+
+    /**
+     * An approved member account.
+     */
+    public function approved(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'approval_status' => UserApprovalStatus::Approved,
+            'approved_at' => now(),
         ]);
     }
 

@@ -68,8 +68,8 @@ export function SiteHeader() {
                                     aria-current={active ? 'page' : undefined}
                                     className={`relative py-[9px] font-arial text-[16px] leading-[20px] whitespace-nowrap text-trim xl:py-0 xl:text-[14px] ${
                                         active
-                                            ? 'xl:after:content-[" "] font-bold text-[#133260] xl:after:absolute xl:after:top-[29px] xl:after:right-0 xl:after:left-0 xl:after:h-[2px] xl:after:bg-[#133260]'
-                                            : 'text-[#45556c]'
+                                            ? 'xl:after:content-[" "] font-extrabold text-[#133260] xl:after:absolute xl:after:top-[29px] xl:after:right-0 xl:after:left-0 xl:after:h-[2px] xl:after:bg-[#133260]'
+                                            : 'font-semibold text-[#45556c]'
                                     }`}
                                 >
                                     {item.label}
@@ -81,7 +81,7 @@ export function SiteHeader() {
                     <div className="mt-[40px] flex w-full flex-col gap-[12px] xl:mt-0 xl:contents">
                         <Link
                             href={auth.user ? dashboard() : login()}
-                            className="flex h-[46px] w-full items-center justify-center rounded-[8px] border border-solid border-[#cad5e2] bg-white font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b] text-trim xl:absolute xl:top-[66px] xl:left-[1010px] xl:h-auto xl:w-auto xl:border-0 xl:bg-transparent xl:font-normal xl:text-[#45556c]"
+                            className="flex h-[46px] w-full items-center justify-center rounded-[8px] border border-solid border-[#cad5e2] bg-white font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b] text-trim xl:absolute xl:top-[66px] xl:left-[1010px] xl:h-auto xl:w-auto xl:border-0 xl:bg-transparent xl:font-semibold xl:text-[#45556c]"
                         >
                             {auth.user ? 'Ir al panel' : 'Iniciar sesión'}
                         </Link>

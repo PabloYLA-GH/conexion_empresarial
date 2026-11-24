@@ -21,6 +21,8 @@ void createInertiaApp({
             case name === 'proximamente':
             case name === 'auth/login':
             case name === 'auth/forgot-password':
+            case name === 'auth/register':
+            case name === 'auth/registration-pending':
                 return PublicLayout;
             case name.startsWith('auth/'):
                 return AuthLayout;

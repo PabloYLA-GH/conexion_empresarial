@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react';
-import { login, register } from '@/routes';
+import { register } from '@/routes';
 import { FillIcon, Glyph } from './glyph';
 
 export function CtaSection() {
@@ -31,7 +31,7 @@ export function CtaSection() {
                         </span>
                     </Link>
                     <Link
-                        href={login()}
+                        href="/directory"
                         className="flex shrink-0 items-center justify-center gap-[10px] rounded-[8px] border border-solid border-[#4f5d72] bg-[#142743] px-[25px] py-[20px]"
                     >
                         <FillIcon

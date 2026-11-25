@@ -2,35 +2,31 @@ import { createInertiaApp } from '@inertiajs/react';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { initializeTheme } from '@/hooks/use-appearance';
-import AppLayout from '@/layouts/app-layout';
-import AuthLayout from '@/layouts/auth-layout';
-import PublicLayout from '@/layouts/public-layout';
-import SettingsLayout from '@/layouts/settings/layout';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+
+const layouts = import.meta.glob('./pages/**/_layout.tsx', {
+    eager: true,
+    import: 'default',
+});
 
 void createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),
     layout: (name) => {
-        switch (true) {
-            case name === 'welcome':
-                return null;
-            case name === 'home':
-            case name === 'directorio':
-            case name === 'vinculaciones':
-            case name === 'proximamente':
-            case name === 'auth/login':
-            case name === 'auth/forgot-password':
-            case name === 'auth/register':
-            case name === 'auth/registration-pending':
-                return PublicLayout;
-            case name.startsWith('auth/'):
-                return AuthLayout;
-            case name.startsWith('settings/'):
-                return [AppLayout, SettingsLayout];
-            default:
-                return AppLayout;
+        const segments = name.split('/');
+
+        for (let i = segments.length - 1; i >= 0; i--) {
+            const prefix = segments.slice(0, i).join('/');
+            const key = prefix
+                ? `./pages/${prefix}/_layout.tsx`
+                : './pages/_layout.tsx';
+
+            if (key in layouts) {
+                return layouts[key];
+            }
         }
+
+        return null;
     },
     strictMode: true,
     withApp(app) {

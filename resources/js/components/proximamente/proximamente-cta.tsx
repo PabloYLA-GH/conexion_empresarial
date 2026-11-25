@@ -17,7 +17,7 @@ export function ProximamenteCta() {
                 </div>
                 <div className="flex w-full flex-col gap-[9px]">
                     <a
-                        href="/directorio"
+                        href="/directory"
                         className="flex w-full items-center justify-center gap-[10px] rounded-[8px] border border-solid border-[#4f5d72] bg-[#142743] px-[25px] py-[20px]"
                     >
                         <Compass
@@ -62,7 +62,7 @@ export function ProximamenteCta() {
 
                 <div className="flex w-full shrink-0 flex-col gap-[10px] sm:w-auto sm:flex-row sm:items-center">
                     <a
-                        href="/directorio"
+                        href="/directory"
                         className="flex h-[56px] w-full items-center justify-center gap-[10px] rounded-[8px] border border-solid border-[#4f5d72] bg-[#142743] sm:w-[166px]"
                     >
                         <Compass

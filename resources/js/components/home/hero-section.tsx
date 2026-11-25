@@ -32,7 +32,7 @@ export function HeroSection() {
                 </div>
                 <div className="flex w-full flex-col gap-[9px] sm:flex-row sm:items-center">
                     <PrimaryButton
-                        href="/directorio"
+                        href="/directory"
                         className="flex w-full items-center justify-center px-[24px] py-[18.5px] sm:w-auto"
                     >
                         Explorar directorio

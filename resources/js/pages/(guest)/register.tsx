@@ -5,6 +5,7 @@ import PasswordInput from '@/components/password-input';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Spinner } from '@/components/ui/spinner';
+import PublicLayout from '@/layouts/public-layout';
 import { login } from '@/routes';
 import { store } from '@/routes/register';
 
@@ -126,3 +127,5 @@ export default function Register({ passwordRules, memberTypes, categories, regio
         </main>
     </>;
 }
+
+Register.layout = PublicLayout;

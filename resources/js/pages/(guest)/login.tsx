@@ -4,6 +4,7 @@ import PasswordInput from '@/components/password-input';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Spinner } from '@/components/ui/spinner';
+import PublicLayout from '@/layouts/public-layout';
 import { register } from '@/routes';
 import { store } from '@/routes/login';
 import { request } from '@/routes/password';
@@ -137,3 +138,5 @@ export default function Login({ status, canResetPassword }: Props) {
         </>
     );
 }
+
+Login.layout = PublicLayout;

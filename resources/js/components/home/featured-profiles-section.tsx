@@ -31,7 +31,7 @@ export function FeaturedProfilesSection() {
                     nuestra comunidad.
                 </SectionHeading>
                 <OutlineButton
-                    href="/directorio"
+                    href="/directory"
                     className="px-[14px] py-[12px] text-[12px]"
                 >
                     Consultar todos los perfiles

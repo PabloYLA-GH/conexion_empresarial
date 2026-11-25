@@ -7,9 +7,9 @@ import { HairLine } from './glyph';
 
 const nav = [
     { label: 'Inicio', href: '/' },
-    { label: 'Directorio', href: '/directorio' },
-    { label: 'Vinculaciones', href: '/vinculaciones' },
-    { label: 'Próximamente', href: '/proximamente' },
+    { label: 'Directorio', href: '/directory' },
+    { label: 'Vinculaciones', href: '/connections' },
+    { label: 'Próximamente', href: '/coming-soon' },
 ];
 
 export function SiteHeader() {

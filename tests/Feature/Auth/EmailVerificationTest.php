@@ -34,7 +34,7 @@ class EmailVerificationTest extends TestCase
     {
         $user = User::factory()->approved()->unverified()->create();
 
-        $response = $this->actingAs($user)->get(route('appearance.edit'));
+        $response = $this->actingAs($user)->get(route('settings.appearance'));
 
         $response->assertOk();
     }

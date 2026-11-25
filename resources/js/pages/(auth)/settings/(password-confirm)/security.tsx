@@ -6,7 +6,7 @@ import InputError from '@/components/input-error';
 import PasswordInput from '@/components/password-input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { edit } from '@/routes/security';
+import { security } from '@/routes/settings';
 import type { Props as ManagePasskeysProps } from '@/components/manage-passkeys';
 import ManagePasskeys from '@/components/manage-passkeys';
 import type { Props as ManageTwoFactorProps } from '@/components/manage-two-factor';
@@ -142,7 +142,7 @@ Security.layout = {
     breadcrumbs: [
         {
             title: 'Security settings',
-            href: edit(),
+            href: security(),
         },
     ],
 };

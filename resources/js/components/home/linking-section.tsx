@@ -62,7 +62,7 @@ export function LinkingSection() {
                         </div>
                     </div>
                     <PrimaryButton
-                        href="#vinculaciones"
+                        href="/connections"
                         className="px-[24px] py-[16px]"
                     >
                         Explorar Vinculaciones

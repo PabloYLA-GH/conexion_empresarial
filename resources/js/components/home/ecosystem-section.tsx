@@ -46,7 +46,7 @@ export function EcosystemSection() {
                     directamente en el directorio.
                 </SectionHeading>
                 <TextLink
-                    href="/directorio"
+                    href="/directory"
                     arrow="arrow-directory.svg"
                     arrowClassName="h-[9.333px] w-[9.334px]"
                     className="w-[175.333px] shrink-0 justify-between"

@@ -51,7 +51,7 @@ export function UpcomingSection() {
                     </div>
                 </div>
                 <TextLink
-                    href="#proximamente"
+                    href="/coming-soon"
                     arrow="arrow-proximas.svg"
                     arrowClassName="size-[7.333px]"
                 >

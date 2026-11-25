@@ -5,6 +5,7 @@ import InputError from '@/components/input-error';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Spinner } from '@/components/ui/spinner';
+import PublicLayout from '@/layouts/public-layout';
 import { login, register } from '@/routes';
 import { email } from '@/routes/password';
 
@@ -126,3 +127,5 @@ export default function ForgotPassword({ status }: { status?: string }) {
         </>
     );
 }
+
+ForgotPassword.layout = PublicLayout;

@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PublicLayout from '@/layouts/public-layout';
 import { login } from '@/routes';
 
 export default function RegistrationPending() {
@@ -15,3 +16,5 @@ export default function RegistrationPending() {
         </main>
     </>;
 }
+
+RegistrationPending.layout = PublicLayout;

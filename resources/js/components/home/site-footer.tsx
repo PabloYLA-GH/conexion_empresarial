@@ -41,13 +41,13 @@ export function SiteFooter() {
                     <Link href="/" className={link}>
                         Inicio
                     </Link>
-                    <Link href="/directorio" className={link}>
+                    <Link href="/directory" className={link}>
                         Directorio empresarial y profesional
                     </Link>
-                    <Link href="/vinculaciones" className={link}>
+                    <Link href="/connections" className={link}>
                         Vinculaciones
                     </Link>
-                    <Link href="/proximamente" className={link}>
+                    <Link href="/coming-soon" className={link}>
                         Próximamente
                     </Link>
                 </nav>

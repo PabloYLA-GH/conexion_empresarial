@@ -82,8 +82,8 @@ docker run --rm \
 
 ## Acceso
 
-Aplicación: http://localhost:8000
-Vite: http://localhost:5173
+- Aplicación: http://localhost:8000
+- Vite: http://localhost:5173
 
 ## Verificación
 
@@ -95,8 +95,8 @@ Vite: http://localhost:5173
 ## Trabajo colaborativo
 
 - main: código integrado y estable.
-- feature/*: desarrollo de funcionalidades.
-- fix/*: corrección de errores.
+- feature/\*: desarrollo de funcionalidades.
+- fix/\*: corrección de errores.
 - Todas las funcionalidades se integran mediante Pull Requests.
 
 No subir archivos .env, credenciales ni datos locales.

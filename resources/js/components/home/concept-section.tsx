@@ -48,14 +48,14 @@ export function ConceptSection() {
                         key={item.number}
                         className="flex w-full items-start gap-[24px] border-b border-solid border-[#e2e8f0] bg-white py-[30px]"
                     >
-                        <span className="flex h-[14px] w-[21.81px] shrink-0 flex-col justify-center font-menlo text-[12px] leading-[16px] font-bold text-[#133260]">
+                        <span className="font-menlo flex h-[14px] w-[21.81px] shrink-0 flex-col justify-center text-[12px] leading-[16px] font-bold text-[#133260]">
                             {item.number}
                         </span>
                         <div className="flex min-w-px flex-1 flex-col items-start gap-[15px]">
-                            <h3 className="min-h-[12px] w-full font-heading text-[16px] leading-[24px] font-bold text-[#0f172b] text-trim">
+                            <h3 className="font-heading text-trim min-h-[12px] w-full text-[16px] leading-[24px] font-bold text-[#0f172b]">
                                 {item.title}
                             </h3>
-                            <p className="w-full font-arial text-[14px] leading-[22.75px] text-[#45556c] text-trim">
+                            <p className="font-arial text-trim w-full text-[14px] leading-[22.75px] text-[#45556c]">
                                 {item.text}
                             </p>
                         </div>

@@ -7,10 +7,10 @@ export function CtaSection() {
         <section className="mx-auto flex w-full max-w-[1217px] flex-col items-start rounded-[16px] bg-[#133260] p-[24px] lg:h-[276px] lg:pt-[67px] lg:pr-[73px] lg:pb-[87px] lg:pl-[48px]">
             <div className="flex w-full flex-col items-start gap-[32px] lg:flex-row lg:items-center lg:gap-[117px]">
                 <div className="flex min-w-px flex-1 flex-col items-start gap-[27px]">
-                    <h2 className="w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-white text-trim">
+                    <h2 className="font-heading text-trim w-full text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-white">
                         Forma parte de Comunidad 360° desde esta primera etapa
                     </h2>
-                    <p className="w-full font-arial text-[16px] leading-[26px] text-[#e2e8f0] text-trim">
+                    <p className="font-arial text-trim w-full text-[16px] leading-[26px] text-[#e2e8f0]">
                         Crea tu cuenta, registra tu perfil empresarial o
                         profesional y comienza a conectar con aliados,
                         proveedores y oportunidades de la comunidad.
@@ -26,7 +26,7 @@ export function CtaSection() {
                             className="h-[15.6px] w-[17.333px]"
                             inset="-5.56% -5% -5.55% -5%"
                         />
-                        <span className="font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#133260] text-trim">
+                        <span className="font-arial text-trim text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#133260]">
                             Registrarme ahora
                         </span>
                     </Link>
@@ -38,7 +38,7 @@ export function CtaSection() {
                             src="icon-directory.svg"
                             className="size-[16px]"
                         />
-                        <span className="font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
+                        <span className="font-arial text-trim text-[14px] leading-[20px] font-bold whitespace-nowrap text-white">
                             Explorar directorio
                         </span>
                     </Link>

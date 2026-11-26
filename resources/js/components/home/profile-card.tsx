@@ -57,15 +57,15 @@ export function ProfileCard({
             </div>
             <div className="flex w-full flex-1 flex-col items-start gap-[23px] rounded-b-[12px] border-x border-b border-solid border-[#e2e8f0] bg-white p-[20px]">
                 <div className="flex w-full flex-col items-start gap-[11px]">
-                    <h3 className="w-full font-heading text-[16px] leading-[20px] font-bold text-[#0f172b] text-trim">
+                    <h3 className="font-heading text-trim w-full text-[16px] leading-[20px] font-bold text-[#0f172b]">
                         {profile.name}
                     </h3>
-                    <p className="w-full font-arial text-[12px] leading-[19.5px] text-[#45556c] text-trim">
+                    <p className="font-arial text-trim w-full text-[12px] leading-[19.5px] text-[#45556c]">
                         {profile.tagline}
                     </p>
                 </div>
                 <div className="flex w-full flex-col items-start gap-[23px]">
-                    <p className="w-full font-arial text-[14px] leading-[19.5px] text-[#45556c] text-trim">
+                    <p className="font-arial text-trim w-full text-[14px] leading-[19.5px] text-[#45556c]">
                         {profile.description}
                     </p>
                     <div className="flex items-center gap-[6px]">
@@ -73,7 +73,7 @@ export function ProfileCard({
                             src="icon-location.svg"
                             className="size-[14px]"
                         />
-                        <span className="font-arial text-[12px] leading-[16px] whitespace-nowrap text-[#62748e] text-trim">
+                        <span className="font-arial text-trim text-[12px] leading-[16px] whitespace-nowrap text-[#62748e]">
                             {profile.location}
                         </span>
                     </div>
@@ -85,7 +85,7 @@ export function ProfileCard({
                         onClick={() => setOpen(true)}
                         className="flex shrink-0 cursor-pointer items-center gap-[8px]"
                     >
-                        <span className="font-arial text-[12px] leading-[20px] font-bold whitespace-nowrap text-[#133260] text-trim">
+                        <span className="font-arial text-trim text-[12px] leading-[20px] font-bold whitespace-nowrap text-[#133260]">
                             Consultar perfil
                         </span>
                         <Glyph

@@ -15,7 +15,7 @@ function Chip({ active, children }: { active?: boolean; children: string }) {
         <button
             type="button"
             aria-pressed={active}
-            className={`flex h-[32px] shrink-0 cursor-pointer items-center rounded-[8px] px-[14px] font-arial text-[13px] leading-[20px] whitespace-nowrap ${
+            className={`font-arial flex h-[32px] shrink-0 cursor-pointer items-center rounded-[8px] px-[14px] text-[13px] leading-[20px] whitespace-nowrap ${
                 active
                     ? 'bg-[#133260] font-bold text-white'
                     : 'border border-solid border-[#cad5e2] text-[#314158]'
@@ -46,7 +46,7 @@ export function VinculacionFilters() {
                     <input
                         type="search"
                         placeholder="Buscar aliado, giro o ciudad..."
-                        className="w-full min-w-0 bg-transparent font-arial text-[13px] text-[#0f172b] outline-none placeholder:text-[#90a1b9]"
+                        className="font-arial w-full min-w-0 bg-transparent text-[13px] text-[#0f172b] outline-none placeholder:text-[#90a1b9]"
                     />
                 </label>
             </div>
@@ -60,7 +60,7 @@ export function VinculacionFilters() {
                         key={label}
                         type="button"
                         aria-pressed={index === 0}
-                        className={`flex h-[24px] cursor-pointer items-center rounded-[8px] px-[10px] font-arial text-[12px] leading-[16px] whitespace-nowrap ${
+                        className={`font-arial flex h-[24px] cursor-pointer items-center rounded-[8px] px-[10px] text-[12px] leading-[16px] whitespace-nowrap ${
                             index === 0
                                 ? 'bg-[#e6ecf5] font-bold text-[#133260]'
                                 : 'text-[#62748e]'

@@ -9,7 +9,7 @@ type Props = {
 
 export function Eyebrow({ children }: { children: ReactNode }) {
     return (
-        <p className="w-full font-arial text-[12px] leading-[16px] font-bold tracking-[0.6px] text-[#133260] uppercase text-trim">
+        <p className="font-arial text-trim w-full text-[12px] leading-[16px] font-bold tracking-[0.6px] text-[#133260] uppercase">
             {children}
         </p>
     );
@@ -26,10 +26,10 @@ export function SectionHeading({ eyebrow, title, children, className }: Props) {
                 eyebrow
             )}
             <div className="flex w-full flex-col items-start gap-[31px]">
-                <h2 className="w-full font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618] text-trim">
+                <h2 className="font-heading text-trim w-full text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618]">
                     {title}
                 </h2>
-                <p className="w-full font-arial text-[16px] leading-[26px] text-[#45556c] text-trim">
+                <p className="font-arial text-trim w-full text-[16px] leading-[26px] text-[#45556c]">
                     {children}
                 </p>
             </div>

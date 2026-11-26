@@ -68,10 +68,10 @@ export function EcosystemSection() {
                         </div>
                         <div className="flex w-full flex-col items-start gap-[23px] rounded-b-[12px] border-x border-b border-solid border-[#e2e8f0] p-[20px]">
                             <div className="flex w-full flex-col items-start gap-[14px]">
-                                <h3 className="w-full font-heading text-[14px] leading-[20px] font-bold text-[#0f172b] text-trim">
+                                <h3 className="font-heading text-trim w-full text-[14px] leading-[20px] font-bold text-[#0f172b]">
                                     {profile.title}
                                 </h3>
-                                <p className="w-full font-arial text-[12px] leading-[19.5px] text-[#45556c] text-trim">
+                                <p className="font-arial text-trim w-full text-[12px] leading-[19.5px] text-[#45556c]">
                                     {profile.text}
                                 </p>
                             </div>

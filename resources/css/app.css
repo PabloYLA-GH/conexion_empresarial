@@ -3,7 +3,7 @@
     themes: corporate --default;
 }
 @plugin "daisyui/theme" {
-    name: "corporate";
+    name: 'corporate';
     default: true;
 
     --color-primary: oklch(32.2% 0.09 258.4);

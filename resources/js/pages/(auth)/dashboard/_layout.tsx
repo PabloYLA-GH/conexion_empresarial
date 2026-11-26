@@ -1,3 +1,3 @@
 import DashboarLayout from '@/layouts/dashboard-layout';
 
-export default DashboarLayout
+export default DashboarLayout;

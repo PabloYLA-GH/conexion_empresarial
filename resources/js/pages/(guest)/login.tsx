@@ -24,17 +24,17 @@ export default function Login({ status, canResetPassword }: Props) {
                     className="flex w-full max-w-[454px] flex-col gap-[29px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-6 py-[50px] sm:px-[38px]"
                 >
                     <div className="flex flex-col gap-[19px]">
-                        <p className="font-arial text-[12px] leading-[16px] font-bold tracking-[0.6px] text-[#133260] uppercase text-trim">
+                        <p className="font-arial text-trim text-[12px] leading-[16px] font-bold tracking-[0.6px] text-[#133260] uppercase">
                             Acceso a Comunidad 360°
                         </p>
                         <div className="flex flex-col gap-[32px]">
                             <h1
                                 id="login-title"
-                                className="font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618] text-trim"
+                                className="font-heading text-trim text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618]"
                             >
                                 Iniciar sesión
                             </h1>
-                            <p className="font-arial text-[16px] leading-[26px] text-[#45556c] text-trim">
+                            <p className="font-arial text-trim text-[16px] leading-[26px] text-[#45556c]">
                                 Accede a tu perfil, solicitudes de contacto y
                                 estado de publicación.
                             </p>
@@ -58,7 +58,7 @@ export default function Login({ status, canResetPassword }: Props) {
                         {({ processing, errors }) => (
                             <>
                                 <div className="flex flex-col gap-[10px]">
-                                    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 font-arial text-[12px] leading-[16px] font-bold text-[#45556c]">
+                                    <div className="font-arial flex flex-wrap items-center justify-between gap-x-3 gap-y-2 text-[12px] leading-[16px] font-bold text-[#45556c]">
                                         <label htmlFor="email">
                                             Correo electrónico
                                         </label>
@@ -80,7 +80,7 @@ export default function Login({ status, canResetPassword }: Props) {
                                         autoComplete="email"
                                         placeholder="nombre@empresa.com"
                                         aria-invalid={Boolean(errors.email)}
-                                        className="h-[40px] rounded-[8px] border-[#cad5e2] bg-white px-[20px] font-arial text-[14px] text-[#0f172b] placeholder:text-[#0f172b]/50"
+                                        className="font-arial h-[40px] rounded-[8px] border-[#cad5e2] bg-white px-[20px] text-[14px] text-[#0f172b] placeholder:text-[#0f172b]/50"
                                     />
                                     <InputError
                                         message={errors.email}
@@ -102,7 +102,7 @@ export default function Login({ status, canResetPassword }: Props) {
                                         autoComplete="current-password"
                                         placeholder="Contraseña"
                                         aria-invalid={Boolean(errors.password)}
-                                        className="h-[40px] rounded-[8px] border-[#cad5e2] bg-white px-[20px] font-arial text-[14px] text-[#0f172b] placeholder:text-[#0f172b]/50"
+                                        className="font-arial h-[40px] rounded-[8px] border-[#cad5e2] bg-white px-[20px] text-[14px] text-[#0f172b] placeholder:text-[#0f172b]/50"
                                     />
                                     <InputError
                                         message={errors.password}
@@ -115,7 +115,7 @@ export default function Login({ status, canResetPassword }: Props) {
                                     variant="outline"
                                     disabled={processing}
                                     data-test="login-button"
-                                    className="h-[35px] w-full rounded-[8px] border-[#cad5e2] bg-white px-[30px] font-heading text-[12px] leading-[16px] font-extrabold text-[#1d293d] shadow-none hover:border-[#133260] hover:bg-[#133260] hover:text-white"
+                                    className="font-heading h-[35px] w-full rounded-[8px] border-[#cad5e2] bg-white px-[30px] text-[12px] leading-[16px] font-extrabold text-[#1d293d] shadow-none hover:border-[#133260] hover:bg-[#133260] hover:text-white"
                                 >
                                     {processing && <Spinner />}
                                     Iniciar sesión
@@ -124,7 +124,7 @@ export default function Login({ status, canResetPassword }: Props) {
                         )}
                     </Form>
 
-                    <p className="flex flex-wrap justify-center gap-x-[8px] gap-y-2 text-center font-arial text-[12px] leading-[20px] text-[#45556c]">
+                    <p className="font-arial flex flex-wrap justify-center gap-x-[8px] gap-y-2 text-center text-[12px] leading-[20px] text-[#45556c]">
                         <span>¿Aún no tienes cuenta?</span>
                         <Link
                             href={register()}

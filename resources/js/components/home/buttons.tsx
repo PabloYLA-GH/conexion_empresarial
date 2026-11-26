@@ -33,7 +33,7 @@ export function PrimaryButton({
             href={href}
             className={`flex shrink-0 items-center justify-center gap-[10px] rounded-[8px] border border-solid border-[#133260] bg-[#133260] ${className}`}
         >
-            <span className="font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
+            <span className="font-arial text-trim text-[14px] leading-[20px] font-bold whitespace-nowrap text-white">
                 {children}
             </span>
             <Glyph src="arrow-hero.svg" className="size-[9.333px]" />
@@ -52,7 +52,7 @@ export function OutlineButton({
             href={href}
             className={`flex shrink-0 items-center justify-center rounded-[8px] border border-solid border-[#cad5e2] ${className}`}
         >
-            <span className="font-arial leading-[20px] font-bold whitespace-nowrap text-[#0f172b] text-trim">
+            <span className="font-arial text-trim leading-[20px] font-bold whitespace-nowrap text-[#0f172b]">
                 {children}
             </span>
         </Anchor>
@@ -80,7 +80,7 @@ export function TextLink({
     return (
         <a href={href} className={`flex shrink-0 items-center ${className}`}>
             <span
-                className={`font-arial leading-[20px] font-bold whitespace-nowrap text-[#133260] text-trim ${textClassName}`}
+                className={`font-arial text-trim leading-[20px] font-bold whitespace-nowrap text-[#133260] ${textClassName}`}
             >
                 {children}
             </span>

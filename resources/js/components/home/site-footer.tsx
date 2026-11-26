@@ -12,23 +12,23 @@ export function SiteFooter() {
             <div className="mx-auto flex w-full max-w-[1216px] flex-col items-start gap-12 px-4 sm:grid sm:grid-cols-2 xl:flex xl:flex-row xl:gap-[58px] xl:pr-0 xl:pl-[2px]">
                 <div className="flex w-full min-w-0 flex-col items-start gap-[78px] xl:w-[307.96px] xl:shrink-0">
                     <div className="flex w-full flex-col items-start gap-[25px] xl:w-[268px]">
-                        <p className="w-full font-heading text-[18px] leading-[28px] font-extrabold tracking-[-0.45px] text-white text-trim">
+                        <p className="font-heading text-trim w-full text-[18px] leading-[28px] font-extrabold tracking-[-0.45px] text-white">
                             Comunidad 360°
                         </p>
-                        <p className="font-arial text-[14px] leading-[22.75px] text-[#90a1b9] text-trim">
+                        <p className="font-arial text-trim text-[14px] leading-[22.75px] text-[#90a1b9]">
                             Conectamos personas, negocios y
                             <br />
                             oportunidades para impulsar el crecimiento
                             <br />
                             de nuestra comunidad.
                         </p>
-                        <p className="font-arial text-[12px] leading-[16px] text-[#62748e] text-trim">
+                        <p className="font-arial text-trim text-[12px] leading-[16px] text-[#62748e]">
                             Plataforma digital de vinculación empresarial,
                             <br />
                             profesional y comunitaria.
                         </p>
                     </div>
-                    <p className="font-arial text-[12px] leading-[16px] text-[#62748e] text-trim xl:whitespace-nowrap">
+                    <p className="font-arial text-trim text-[12px] leading-[16px] text-[#62748e] xl:whitespace-nowrap">
                         © 2026 Comunidad 360°. Todos los derechos reservados.
                     </p>
                 </div>
@@ -59,7 +59,7 @@ export function SiteFooter() {
                         className="flex items-center gap-[8px]"
                     >
                         <FillIcon src="icon-mail.svg" className="size-[16px]" />
-                        <span className="font-arial text-[14px] leading-[20px] break-all text-[#90a1b9] text-trim xl:whitespace-nowrap">
+                        <span className="font-arial text-trim text-[14px] leading-[20px] break-all text-[#90a1b9] xl:whitespace-nowrap">
                             contacto@comunidad360.mx
                         </span>
                     </a>

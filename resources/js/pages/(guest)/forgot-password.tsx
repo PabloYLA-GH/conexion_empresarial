@@ -22,17 +22,17 @@ export default function ForgotPassword({ status }: { status?: string }) {
                     className="flex h-fit w-full max-w-[454px] min-w-0 flex-col gap-[29px] rounded-[16px] border border-[#e2e8f0] bg-white px-6 py-[50px] sm:px-[38px]"
                 >
                     <div className="flex flex-col gap-[19px]">
-                        <p className="font-arial text-[12px] leading-[16px] font-bold tracking-[0.6px] text-[#133260] uppercase text-trim">
+                        <p className="font-arial text-trim text-[12px] leading-[16px] font-bold tracking-[0.6px] text-[#133260] uppercase">
                             Acceso a Comunidad 360°
                         </p>
                         <div className="flex flex-col gap-[32px]">
                             <h1
                                 id="forgot-password-title"
-                                className="font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618] text-trim"
+                                className="font-heading text-trim text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618]"
                             >
                                 Recuperar contraseña
                             </h1>
-                            <p className="font-arial text-[16px] leading-[26px] text-[#45556c] text-trim">
+                            <p className="font-arial text-trim text-[16px] leading-[26px] text-[#45556c]">
                                 Ingresa el correo de tu cuenta para recibir un
                                 enlace de recuperación.
                             </p>
@@ -42,7 +42,7 @@ export default function ForgotPassword({ status }: { status?: string }) {
                     {status && (
                         <div
                             role="status"
-                            className="min-w-0 rounded-[8px] border border-[#bcf2d7] bg-[#effcf5] px-[12px] py-[22px] font-arial text-[12px] leading-normal text-[#133260] [overflow-wrap:anywhere]"
+                            className="font-arial min-w-0 rounded-[8px] border border-[#bcf2d7] bg-[#effcf5] px-[12px] py-[22px] text-[12px] leading-normal [overflow-wrap:anywhere] text-[#133260]"
                         >
                             Revisa tu bandeja de entrada (y spam)
                             {submittedEmail ? (
@@ -64,7 +64,7 @@ export default function ForgotPassword({ status }: { status?: string }) {
                             <>
                                 <label
                                     htmlFor="recovery-email"
-                                    className="font-arial text-[12px] leading-[16px] font-bold text-[#45556c] text-trim"
+                                    className="font-arial text-trim text-[12px] leading-[16px] font-bold text-[#45556c]"
                                 >
                                     Correo electrónico registrado
                                 </label>
@@ -81,14 +81,17 @@ export default function ForgotPassword({ status }: { status?: string }) {
                                     autoComplete="email"
                                     placeholder="nombre@empresa.com"
                                     aria-invalid={Boolean(errors.email)}
-                                    className="h-[40px] rounded-[8px] border-[#cad5e2] bg-white px-[20px] font-arial text-[14px] text-[#0f172b] placeholder:text-[#0f172b]/50"
+                                    className="font-arial h-[40px] rounded-[8px] border-[#cad5e2] bg-white px-[20px] text-[14px] text-[#0f172b] placeholder:text-[#0f172b]/50"
                                 />
-                                <InputError message={errors.email} role="alert" />
+                                <InputError
+                                    message={errors.email}
+                                    role="alert"
+                                />
                                 <Button
                                     type="submit"
                                     disabled={processing}
                                     data-test="email-password-reset-link-button"
-                                    className="h-[33px] w-full rounded-[8px] bg-[#133260] px-[15px] font-arial text-[12px] leading-[20px] font-bold text-white shadow-none hover:bg-[#1b477e]"
+                                    className="font-arial h-[33px] w-full rounded-[8px] bg-[#133260] px-[15px] text-[12px] leading-[20px] font-bold text-white shadow-none hover:bg-[#1b477e]"
                                 >
                                     {processing ? (
                                         <Spinner />
@@ -106,14 +109,17 @@ export default function ForgotPassword({ status }: { status?: string }) {
 
                     <Link
                         href={login()}
-                        className="self-center font-arial text-[12px] leading-[16px] text-[#45556c] text-trim hover:underline"
+                        className="font-arial text-trim self-center text-[12px] leading-[16px] text-[#45556c] hover:underline"
                     >
                         Volver a iniciar sesión
                     </Link>
 
-                    <div aria-hidden="true" className="h-px w-full bg-[#e2e8f0]" />
+                    <div
+                        aria-hidden="true"
+                        className="h-px w-full bg-[#e2e8f0]"
+                    />
 
-                    <p className="flex flex-wrap justify-center gap-x-[8px] gap-y-2 text-center font-arial text-[12px] leading-[20px] text-[#45556c] text-trim">
+                    <p className="font-arial text-trim flex flex-wrap justify-center gap-x-[8px] gap-y-2 text-center text-[12px] leading-[20px] text-[#45556c]">
                         <span>¿Aún no tienes cuenta?</span>
                         <Link
                             href={register()}

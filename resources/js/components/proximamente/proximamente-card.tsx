@@ -17,7 +17,7 @@ export function ProximamenteCard({ item }: { item: Proximamente }) {
                     <Icon aria-hidden size={18} strokeWidth={1.75} />
                 </span>
                 <span className="flex items-center justify-center rounded-[4px] border border-solid border-[#cad5e2] bg-white px-[10px] py-[5px]">
-                    <span className="font-arial text-[10px] leading-[14px] font-bold tracking-[0.5px] whitespace-nowrap text-[#133260] uppercase text-trim">
+                    <span className="font-arial text-trim text-[10px] leading-[14px] font-bold tracking-[0.5px] whitespace-nowrap text-[#133260] uppercase">
                         Próximamente
                     </span>
                 </span>
@@ -27,7 +27,7 @@ export function ProximamenteCard({ item }: { item: Proximamente }) {
                 <span className="font-menlo text-[11px] leading-[16px] text-[#90a1b9]">
                     {item.number}
                 </span>
-                <h3 className="font-heading text-[20px] leading-[26px] font-bold text-[#0f172b] text-trim">
+                <h3 className="font-heading text-trim text-[20px] leading-[26px] font-bold text-[#0f172b]">
                     {item.title}
                 </h3>
                 <p className="font-arial text-[14px] leading-[23px] text-[#45556c]">

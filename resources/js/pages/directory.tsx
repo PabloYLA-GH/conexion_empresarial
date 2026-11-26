@@ -44,7 +44,7 @@ export default function Directorio() {
                             aria-label="Perfiles"
                             className="flex w-full min-w-px flex-1 flex-col items-start gap-[36px]"
                         >
-                            <p className="flex flex-wrap items-center gap-[9px] font-arial text-[12px] leading-[16px] text-[#45556c]">
+                            <p className="font-arial flex flex-wrap items-center gap-[9px] text-[12px] leading-[16px] text-[#45556c]">
                                 <span>
                                     Mostrando{' '}
                                     <strong className="font-bold text-[#0f172b]">
@@ -70,17 +70,17 @@ export default function Directorio() {
                             </div>
                             <button
                                 type="button"
-                                className="self-center rounded-[8px] border border-solid border-[#cad5e2] bg-white px-[24px] py-[18.5px] font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b] md:hidden"
+                                className="font-arial self-center rounded-[8px] border border-solid border-[#cad5e2] bg-white px-[24px] py-[18.5px] text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b] md:hidden"
                             >
                                 Ver más perfiles (56 restantes)
                             </button>
                             <div className="flex w-full flex-col items-start gap-[80px] rounded-[16px] bg-[#133260] px-[35px] py-[67px] md:hidden">
                                 <div className="flex w-full flex-col items-start gap-[27px]">
-                                    <h2 className="w-full font-heading text-[26px] leading-[36px] font-extrabold tracking-[-0.75px] text-white text-trim">
+                                    <h2 className="font-heading text-trim w-full text-[26px] leading-[36px] font-extrabold tracking-[-0.75px] text-white">
                                         Forma parte de Comunidad 360° desde esta
                                         primera etapa
                                     </h2>
-                                    <p className="w-full font-arial text-[14px] leading-[26px] text-[#e2e8f0] text-trim">
+                                    <p className="font-arial text-trim w-full text-[14px] leading-[26px] text-[#e2e8f0]">
                                         Crea tu cuenta, registra tu perfil
                                         empresarial o profesional y comienza a
                                         conectar con aliados, proveedores y
@@ -96,7 +96,7 @@ export default function Directorio() {
                                             src="icon-directory.svg"
                                             className="size-[16px]"
                                         />
-                                        <span className="font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-white text-trim">
+                                        <span className="font-arial text-trim text-[14px] leading-[20px] font-bold whitespace-nowrap text-white">
                                             Explorar directorio
                                         </span>
                                     </Link>
@@ -109,7 +109,7 @@ export default function Directorio() {
                                             className="h-[15.6px] w-[17.333px]"
                                             inset="-5.56% -5% -5.55% -5%"
                                         />
-                                        <span className="font-arial text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#133260] text-trim">
+                                        <span className="font-arial text-trim text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#133260]">
                                             Registrarme ahora
                                         </span>
                                     </Link>

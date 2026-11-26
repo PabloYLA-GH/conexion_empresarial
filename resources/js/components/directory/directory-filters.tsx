@@ -126,7 +126,7 @@ function DropdownField({
                                     aria-selected={value === option}
                                     onMouseEnter={() => setActive(index)}
                                     onClick={() => choose(index)}
-                                    className={`flex h-[24px] shrink-0 cursor-pointer items-center rounded-[6px] px-[11px] font-arial text-[14px] ${
+                                    className={`font-arial flex h-[24px] shrink-0 cursor-pointer items-center rounded-[6px] px-[11px] text-[14px] ${
                                         selected
                                             ? 'bg-[#f8fafc] text-[#0f172b]'
                                             : 'text-[#0f172b]/50'
@@ -158,7 +158,7 @@ export function DirectoryFilters() {
                                 src="icon-filters.svg"
                                 className="size-[16px]"
                             />
-                            <h2 className="font-heading text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b] text-trim">
+                            <h2 className="font-heading text-trim text-[14px] leading-[20px] font-bold whitespace-nowrap text-[#0f172b]">
                                 Filtros y búsqueda
                             </h2>
                         </div>
@@ -171,7 +171,7 @@ export function DirectoryFilters() {
                                 className="size-[9px]"
                                 inset="-5.56%"
                             />
-                            <span className="font-arial text-[12px] leading-[16px] whitespace-nowrap text-[#62748e] text-trim">
+                            <span className="font-arial text-trim text-[12px] leading-[16px] whitespace-nowrap text-[#62748e]">
                                 Limpiar
                             </span>
                         </button>
@@ -197,7 +197,7 @@ export function DirectoryFilters() {
                                 name="q"
                                 type="search"
                                 placeholder="Nombre, negocio, servicio..."
-                                className="min-w-px flex-1 bg-transparent font-arial text-[14px] text-[#0f172b] outline-none placeholder:text-[#0f172b]/50 [&::-webkit-search-cancel-button]:hidden"
+                                className="font-arial min-w-px flex-1 bg-transparent text-[14px] text-[#0f172b] outline-none placeholder:text-[#0f172b]/50 [&::-webkit-search-cancel-button]:hidden"
                             />
                         </div>
                     </div>

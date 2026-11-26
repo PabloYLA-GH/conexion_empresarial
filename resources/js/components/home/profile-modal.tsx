@@ -16,7 +16,7 @@ function Divider() {
 function Section({ title, children }: { title: string; children: ReactNode }) {
     return (
         <section className="flex w-full flex-col items-start gap-[28px]">
-            <h3 className="font-arial text-[14px] leading-[16px] font-bold text-[#45556c] uppercase text-trim">
+            <h3 className="font-arial text-trim text-[14px] leading-[16px] font-bold text-[#45556c] uppercase">
                 {title}
             </h3>
             {children}
@@ -53,10 +53,10 @@ export function ProfileModal({
                                 className="h-full w-[89px] shrink-0 bg-[#f8fafc]"
                             />
                             <div className="relative flex h-full min-w-px flex-1 flex-col items-start gap-[19px]">
-                                <span className="flex h-[20px] items-center justify-center rounded-[4px] border border-solid border-[#cad5e2] bg-[#f8fafc] px-[8px] font-arial text-[8px] font-bold tracking-[0.4px] text-[#133260] uppercase">
+                                <span className="font-arial flex h-[20px] items-center justify-center rounded-[4px] border border-solid border-[#cad5e2] bg-[#f8fafc] px-[8px] text-[8px] font-bold tracking-[0.4px] text-[#133260] uppercase">
                                     Empresa
                                 </span>
-                                <Dialog.Title className="font-heading text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618] text-trim">
+                                <Dialog.Title className="font-heading text-trim text-[30px] leading-[36px] font-extrabold tracking-[-0.75px] text-[#020618]">
                                     {profile.name}
                                 </Dialog.Title>
                                 <p className="flex items-center gap-[6px]">
@@ -66,7 +66,7 @@ export function ProfileModal({
                                         strokeWidth={1.5}
                                         className="text-[#90a1b9]"
                                     />
-                                    <span className="font-arial text-[12px] leading-[16px] text-[#62748e] text-trim">
+                                    <span className="font-arial text-trim text-[12px] leading-[16px] text-[#62748e]">
                                         {profile.location}
                                     </span>
                                 </p>
@@ -98,7 +98,7 @@ export function ProfileModal({
                                             strokeWidth={1.75}
                                             className="text-white"
                                         />
-                                        <span className="font-arial text-[12px] leading-[16px] font-bold whitespace-nowrap text-white text-trim">
+                                        <span className="font-arial text-trim text-[12px] leading-[16px] font-bold whitespace-nowrap text-white">
                                             Solicitar contacto
                                         </span>
                                     </button>
@@ -109,7 +109,7 @@ export function ProfileModal({
                         <Divider />
 
                         <Section title="Descripción y trayectoria">
-                            <p className="w-full font-arial text-[14px] leading-[20px] text-[#45556c] text-trim">
+                            <p className="font-arial text-trim w-full text-[14px] leading-[20px] text-[#45556c]">
                                 {profile.description}.
                             </p>
                         </Section>
@@ -121,9 +121,9 @@ export function ProfileModal({
                                 {profile.products.map((product) => (
                                     <li
                                         key={product}
-                                        className="flex h-[56px] items-center rounded-[16px] border border-solid border-[#e2e8f0] bg-[#f8fafc] px-[20px] font-arial text-[14px] text-[#314158]"
+                                        className="font-arial flex h-[56px] items-center rounded-[16px] border border-solid border-[#e2e8f0] bg-[#f8fafc] px-[20px] text-[14px] text-[#314158]"
                                     >
-                                        <span className="leading-[20px] text-trim">
+                                        <span className="text-trim leading-[20px]">
                                             {product}
                                         </span>
                                     </li>
@@ -138,7 +138,7 @@ export function ProfileModal({
                                 <h4 className="font-arial text-[14px] leading-[16px] font-bold text-[#0f172b]">
                                     {profile.collaboration.title}
                                 </h4>
-                                <p className="w-full font-arial text-[14px] leading-[20px] text-[#45556c] text-trim">
+                                <p className="font-arial text-trim w-full text-[14px] leading-[20px] text-[#45556c]">
                                     {profile.collaboration.text}
                                 </p>
                             </div>
@@ -148,7 +148,7 @@ export function ProfileModal({
 
                         <Section title="Información de contacto">
                             <div className="grid w-full grid-cols-1 gap-[16px] sm:grid-cols-[298px_1fr]">
-                                <p className="flex h-[56px] items-center gap-[8px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-[20px] font-arial text-[12px] text-[#314158]">
+                                <p className="font-arial flex h-[56px] items-center gap-[8px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-[20px] text-[12px] text-[#314158]">
                                     <Phone
                                         aria-hidden
                                         size={12}
@@ -157,7 +157,7 @@ export function ProfileModal({
                                     />
                                     {profile.contact.phone}
                                 </p>
-                                <p className="flex h-[56px] items-center gap-[8px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-[20px] font-arial text-[12px] text-[#314158]">
+                                <p className="font-arial flex h-[56px] items-center gap-[8px] rounded-[16px] border border-solid border-[#e2e8f0] bg-white px-[20px] text-[12px] text-[#314158]">
                                     <Mail
                                         aria-hidden
                                         size={12}

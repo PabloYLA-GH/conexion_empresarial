@@ -69,7 +69,9 @@ if (is_dir($pagesPath)) {
 
         $registeredUris->put($uri, true);
 
-        $routeName = str_replace(['/', '[', ']'], ['.', '', ''], $cleanPath);
+        $routeName = $uri === ''
+            ? 'home'
+            : str_replace(['/', '[', ']'], ['.', '', ''], $uri);
 
         $route = Route::get($uri === '' ? '/' : $uri, fn (Request $request) => inertia(
             $component,
